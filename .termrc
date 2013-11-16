@@ -1,0 +1,10 @@
+root:
+  ~/code/github/jquery.adaptive-backgrounds.js
+
+commands:
+  git:       git st
+  serve:     grunt serve
+
+layout:
+  - [ git ]      
+  - [ serve ]    

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Explicit Parent</title>
+
+  <script type="text/javascript" src='/lib/jquery.js'></script>
+  <script type="text/javascript" src='/src/jquery.adaptive-background.js'></script>
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+    $.adaptiveBackground.run({
+      parent: '.my-parent'
+    })
+  });
+
+  </script>
+
+  <style type="text/css"> 
+
+    body{
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .img-wrap{
+      height: 500px;
+      width: 500px; 
+      position: absolute;
+      top: 50%; left: 50%;
+      text-align: center;
+      -webkit-transform: translateY(-50%) translateX(-50%);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .img-wrap img{
+      height: 100%;
+    }
+
+  </style>
+
+</head>
+<body class='my-parent'>
+
+  <div class='img-wrap'>
+    <img src="images/4.jpg" data-adaptive-background='1'>
+  </div>
+
+</body>
+</html>
