@@ -6,8 +6,8 @@
   var EVENT_CF      = 'ab-color-found';
 
   var DEFAULTS      = {
-    selector:  'img[data-adaptive-background="1"]',
-    parent:    null,
+    selector:   'img[data-adaptive-background="1"]',
+    parent:     null,
   };
 
   /*  Create a ColorThief object, which will

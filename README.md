@@ -8,9 +8,9 @@ Getting Started
 Simply include jQuery and the __[script](https://raw.github.com/briangonzalez/jquery.adaptive-backgrounds.js/master/src/jquery.pep.js)__ in your page, then run the script like so:
 
 ```javascript
-  $(document).ready(function(){
-    $.adaptiveBackground.run()
-  });
+$(document).ready(function(){
+  $.adaptiveBackground.run()
+});
 ```
 
 The script looks for image(s) with the `data-adaptive-background` attribute:
@@ -19,6 +19,11 @@ The script looks for image(s) with the `data-adaptive-background` attribute:
 <img src="/image.jpg" data-adaptive-background='1'>
 ```
 
+A Lil' Demo 
+-----------
+Here's a little demo of how it works. (1) The page loads (2) the dominant background color of the image is extracted (3) said color is applied to parent of image.
+<img src="https://raw.github.com/briangonzalez/jquery.adaptive-background.js/master/misc/ab.gif">
+
 API
 ---
 This plugin exposes one method:
@@ -26,21 +31,31 @@ This plugin exposes one method:
 
 Default Options
 ----------------
-- __selector__ String _(defult: 'img[data-adaptive-background="1"]')_ a CSS selector which denotes which images to grab/process. Ideally, this selector would start with _img_, to ensure we only grab and try to process actual images.
-- __parent__ String _(defult: 'img[data-adaptive-background="1"]')_ a string which denotes which images to grab. Ideally, this selector would start with _img_, to ensure we only grab and try to process images.
+- __selector__ String _(default: `'img[data-adaptive-background="1"]'`)_ a CSS selector which denotes which images to grab/process. Ideally, this selector would start with _img_, to ensure we only grab and try to process actual images.
+- __parent__ falsy _(default: `null`)_ a CSS selector which denotes which parent to apply the background color to. By default, the color is applied to the parent one level up the DOM tree.
 
 Events Emitted
 --------------
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper justo sem. Fusce ac sem est. Aenean dignissim feugiat auctor. Vestibulum in ante sem. Ut sit amet erat arcu, eget fringilla odio. Aenean a nibh est. Cras metus urna, vulputate non feugiat vel, condimentum sit amet purus.
+- __ab-color-found__ [Event](http://api.jquery.com/category/events/event-object/) This event is fired when the dominant color of the image is found. The payload includes the dominant color as well as the color palette contained in the image.
+
+__Example:__
+Subscribe to the __ab-color-found__ event like so:
+
+```javascript
+$('img.my-image').on('ab-color-found', function(payload){
+  console.log(payload.color); // The dominant color.
+  console.log(palette);       // The palette in the image.
+});
+```
 
 Caveats
 --------------
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper justo sem. Fusce ac sem est. Aenean dignissim feugiat auctor. Vestibulum in ante sem. Ut sit amet erat arcu, eget fringilla odio. Aenean a nibh est. Cras metus urna, vulputate non feugiat vel, condimentum sit amet purus.
+This plugin utlizes [Color Thief](http://lokeshdhakar.com/projects/color-thief/) which in turn uses the Canvas. The script will silently fail if one tries to extract the colors from an image not hosted in the current domain. 
 
 Contact
 -------
-lipsum.
+Find me. [@brianmgonzalez](http://twitter.com/brianmgonzalez)
 
 License
 -------
-Lipsum.
+MIT, yo.
