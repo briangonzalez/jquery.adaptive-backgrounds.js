@@ -1,0 +1,4 @@
+safe: true
+lsi: false
+pygments: true
+source: ./site
