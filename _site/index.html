@@ -3,30 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <title>jquery.adaptive-backgrounds.js &bull; A</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/css/style.css" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300|Raleway:100' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/css/styles.css" />
   <link rel="icon" type="image/x-icon" href="/favicon.png" />
-  <script src="/js/modernizr-2.5.3.min.js"></script>
+
+  <!-- JS -->
+  <script src="/js/jquery.js"></script>
+  <script src="//rawgithub.com/briangonzalez/jquery.adaptive-backgrounds.js/master/src/jquery.adaptive-background.js"></script>
+  <script src="/js/waypoints.min.js"></script>
+  <script src="/js/main.js"></script>
+
+  <!-- 
+    http://dribbble.com/shots/1109260-Musicbox-in-progress?list=users
+   -->
 </head>
 
 
-<body class="wrap">
+<body>
   <header>
-  <nav>
-  </nav>
+  <span class='logo'>
+    <span class='box first'></span>
+    <span class='box second'></span>
+    <span class='box third'></span>
+  </span>
+  <h1>adaptive backgrounds</h1>
+  <h3>A jQuery plugin for extracting dominant colors from images and applying it to its parent.</h3>
+  <a href='https://github.com/briangonzalez/jquery.adaptive-backgrounds.js' class='button mr'>Github</a>
+  <a href='https://github.com/briangonzalez/jquery.adaptive-backgrounds.js' class='button tweet'>Tweet</a>
 </header>
 
 
-  <h1>
-  This is a test.
-</h1>
+  <div class='image-wrapper slow'>
+  <div class='inner'>
+    <span class='color'>
+      <span class='swatch'></span>
+    </span>
+    <img src="/img/main-images/1.jpg" data-adaptive-background='1' data-description='grandpa'>
+  </div>
+</div>
+
+<div class='image-wrapper'>
+  <div class='inner'>
+    <span class='color'>
+      <span class='swatch'></span>
+    </span>
+    <img src="/img/main-images/2.jpg" data-adaptive-background='1'>
+  </div>
+</div>
+
+<div class='image-wrapper'>
+  <div class='inner'>
+    <span class='color'>
+      <span class='swatch'></span>
+    </span>
+    <img src="/img/main-images/3.jpg" data-adaptive-background='1' data-description='boy'>
+  </div>
+</div>
+
+<div class='image-wrapper'>
+  <div class='inner'>
+    <span class='color'>
+      <span class='swatch'></span>
+    </span>
+    <img src="/img/main-images/4.jpg" data-adaptive-background='1'>
+  </div>
+</div>
+
+<div class='image-wrapper'>
+  <div class='inner'>
+    <span class='color'>
+      <span class='swatch'></span>
+    </span>
+    <img src="/img/main-images/5.jpg" data-adaptive-background='1'>
+  </div>
+</div>
+
+<div class='image-wrapper'>
+  <div class='inner'>
+    <span class='color'>
+      <span class='swatch'></span>
+    </span>
+    <img src="/img/main-images/6.jpg" data-adaptive-background='1'>
+  </div>
+</div>
+
 
 
   <footer>
+Made with love in Sunny SoCal. Images from the talented 
+<a href="http://www.leavervoort.nl/">Lea Vervoort</a>.
+</br>
+<!-- <a href="http://briangonzalez.org">Brian Gonzalez</a> </br> -->
+<div class='twitter-wrap'>
+  <a href="https://twitter.com/brianmgonzalez" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @brianmgonzalez</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
 </footer>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  
+  ga('create', 'UA-31930831-5', 'briangonzalez.github.io');
+  ga('send', 'pageview');
+
+</script>
 
 
 </body>

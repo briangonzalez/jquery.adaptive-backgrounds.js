@@ -1,0 +1,10 @@
+root:
+  ~/code/github/jquery.adaptive-backgrounds.js
+
+commands:
+  git:       git st
+  serve:     jekyll serve --watch
+
+layout:
+  - [ git ]       # row 1, with 2 panes
+  - [ serve ]             # row 2, with 1 pane

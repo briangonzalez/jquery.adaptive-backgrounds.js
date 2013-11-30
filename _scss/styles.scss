@@ -1,0 +1,196 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass";
+
+@import "mixins";
+@import "animations";
+
+// Breakpoints & Vars ------
+$break-1: 500px;
+$break-2: 750px;
+$break-3: 1000px;
+
+$rhythm: 80px;
+
+// Colors ------
+$darkgrey: #333;
+$lightgrey: #eee;
+$darkblue: #1b252d;
+
+body{
+  font-family: Lato, arial;
+  background: $lightgrey;
+  overflow-x: hidden;
+  line-height: 1.6em;
+
+  *{ box-sizing: border-box; }
+
+  .image-wrapper{
+    text-align: center;
+    @include transition(all 0.5s ease);
+
+    .inner{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      &:after, &:before {
+        content: '';
+        position: absolute;
+        top: 20%;
+        left: 10px;
+        width: 500px;
+        height: 1000px;
+        z-index: 1;
+        background: rgba(white, 0.05);
+        border: 1px solid rgba(white, 0.1);
+        @include transform( rotate(45deg) );
+      }
+
+      &:after{
+        @include transform( rotate(135deg) );
+      };
+
+      .color{
+        position: absolute;
+        top: 0; left: 0;
+        margin-top: 10px;
+        color: $darkgrey;
+        background: rgba($lightgrey, 0.9);
+        padding: 5px 10px;
+        font-size: 80%;
+        opacity: 0; 
+        @include box-shadow(0 0 10px rgba(black, 0.1) );
+        @include transition(all 0.25s ease);
+        .swatch{ 
+          display: inline-block; 
+          width: 10px; height: 10px; 
+          background: red; 
+          margin-right: 5px; 
+        }
+      }
+      &:hover .color{ opacity: 1; };
+
+    }
+
+    img{
+      width: 50%;
+      min-width: 250px;
+      max-width: 600px;
+      display: inline-block;
+      z-index: 2;
+      @include box-shadow(0 5px 10px rgba(black, 0.4) );
+      margin: $rhythm*2 0;
+      position: relative;
+      z-index: 10;
+    }
+
+  }
+
+  header{
+    text-align: center;
+    color: #333;
+    padding: $rhythm*2 0;
+
+    .logo{
+      $box-length: 40px;
+      width: $box-length*3;
+      height: $box-length;
+      display: inline-block;
+      margin-bottom: $rhythm/2;
+
+      .box{ 
+        display: inline-block; 
+        width: $box-length; 
+        height: $box-length; 
+        background: #7c2518; 
+        opacity: 0.85;
+        margin-left: -$box-length/3;
+        border: 1px solid rgba(white, 0.5);
+        border-radius: 2px;
+        @include transform( rotate(0deg) );
+        @include transform-origin( 50% 50% );
+
+        &.first   { @include transform( rotate(0deg) translateX(-50px) ); @include animation(0.5s, 3s, rotate-first,  1); background: #a27c31; }
+        &.second  { @include transform( rotate(0deg) );                   @include animation(0.5s, 3s, rotate-second, 1); }
+        &.third   { @include transform( rotate(0deg) translateX(50px) );  @include animation(0.5s, 3s, rotate-third,  1); background: #1b252d;}
+      }
+    }
+
+    h1{ 
+      text-transform: uppercase; 
+      letter-spacing: 2px;
+      font-size: 160%;
+      margin-bottom: 0.25em;
+      font-weight: 300;
+      color: $darkblue + 60;
+      font-family: Raleway;
+      @include text-shadow( 1px 1px 0px rgba(black, 0.1) );
+
+      @include respond-to($break-1) { font-size: 200%; }
+      @include respond-to($break-2) { font-size: 300%; }
+    }
+
+    h3{
+      font-weight: 300;
+      font-size: 100%;
+      padding: 0 3em;
+      letter-spacing: 1px;
+      color: $darkblue + 100;
+      @include respond-to($break-1) { font-size: 110%; }
+      @include respond-to($break-2) { font-size: 120%; }
+    }
+
+    a.button{
+      background: $darkblue + 30;
+      margin-top: $rhythm/2;
+      padding: $rhythm/6 $rhythm/3;
+      border: none;
+      color: white;
+      font-family: Lato;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      width: 80%;
+
+      @include transition(all 0.25s ease);
+      @include box-shadow(
+          0 1px 0 $lightgrey - 20,
+          0 2px 0 $lightgrey - 20,
+          0 3px 0 $lightgrey - 20,
+          0 4px 0 $lightgrey - 20
+        );
+
+      @include respond-to($break-1){
+        display: inline-block;
+        width: auto;
+
+        &.tweet  { margin-top: $rhythm/2; }
+      }
+
+      &:hover  { @include transform( translateY(-1px) ); background: $darkblue + 40; }
+      &:active { @include transform( translateY(3px) ); }
+      &.mr     { margin-right: 5px; }
+      &.tweet  { margin-top: 10px; }
+    }
+  }
+
+  footer{
+    background: $lightgrey;
+    padding: $rhythm*1 $rhythm/4;
+    text-align: center;
+
+    .twitter-wrap{
+      margin-top: $rhythm/4;
+    }
+  }
+
+}

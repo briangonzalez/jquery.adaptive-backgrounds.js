@@ -1,0 +1,23 @@
+
+
+
+@include keyframe(rotate-first) {
+  0%    { @include transform( rotate(0deg) translateX(-50px) ); }
+  20%   { @include transform( rotate(45deg) );  }
+  100%   { @include transform( rotate(45deg) );  }
+  // 100%    { @include transform( rotate(0deg) translateX(-50px) ); }
+}
+
+@include keyframe(rotate-second) {
+  0%    { @include transform( rotate(0deg) ); }
+  30%   { @include transform( rotate(45deg) );  }
+  100%   { @include transform( rotate(45deg) );  }
+  // 100%    { @include transform( rotate(0deg)); }
+}
+
+@include keyframe(rotate-third) {
+  0%    { @include transform( rotate(0deg) translateX(50px) ); }
+  20%   { @include transform( rotate(-45deg) );  }
+  100%   { @include transform( rotate(-45deg) );  }
+  // 100%    { @include transform( rotate(0deg) translateX(50px) ); }
+}
