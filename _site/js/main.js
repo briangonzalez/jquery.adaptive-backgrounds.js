@@ -14,7 +14,7 @@
              .attr('data-color', data.color);
 
       $(this).css({ 
-        border: "1px solid rgba(" + data.palette[0].join(',') + ", 0.25)" 
+        border: "1px solid " + data.palette[0].replace(')', ",0.25)").replace('rgb', "rgba") 
       });
 
       $(this).parents('.image-wrapper')
