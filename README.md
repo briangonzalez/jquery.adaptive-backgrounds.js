@@ -19,7 +19,7 @@ The script looks for image(s) with the `data-adaptive-background` attribute:
 <img src="/image.jpg" data-adaptive-background='1'>
 ```
 
-A Lil' Demo 
+Demo 
 -----------
 Here's a little demo of how it works. (1) The page loads (2) the dominant background color of the image is extracted (3) said color is applied to parent of image.
 <img src="https://raw.github.com/briangonzalez/jquery.adaptive-background.js/master/misc/ab.gif">
@@ -34,12 +34,23 @@ Default Options
 - __selector__ String _(default: `'img[data-adaptive-background="1"]'`)_ a CSS selector which denotes which images to grab/process. Ideally, this selector would start with _img_, to ensure we only grab and try to process actual images.
 - __parent__ falsy _(default: `null`)_ a CSS selector which denotes which parent to apply the background color to. By default, the color is applied to the parent one level up the DOM tree.
 
+__Example:__
+Call the `run` method, passing in any options you'd like to override.
+
+```javascript
+var opts = {
+  selector: '.some-selector',
+  parent:   '.some-parent-of-some-selector'
+}
+$.adaptiveBackground.run(opts)
+```
+
 Events Emitted
 --------------
 - __ab-color-found__ [Event](http://api.jquery.com/category/events/event-object/) This event is fired when the dominant color of the image is found. The payload includes the dominant color as well as the color palette contained in the image.
 
 __Example:__
-Subscribe to the __ab-color-found__ event like so:
+Subscribe to the `ab-color-found` event like so:
 
 ```javascript
 $('img.my-image').on('ab-color-found', function(payload){
