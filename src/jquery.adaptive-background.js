@@ -1,3 +1,6 @@
+
+/* jshint debug: true, expr: true */
+
 ;(function($){
 
   /* Constants. */ 
@@ -21,8 +24,8 @@
   var isRemoteImageURL = function(url){
     var parser = document.createElement('a');
     parser.href = url;
-    return !(parser.hostname === location.hostname && parser.protocol === location.protocol && parser.port === location.port)
-  }
+    return !(parser.hostname === location.hostname && parser.protocol === location.protocol && parser.port === location.port);
+  };
 
   /* Our main function declaration. */ 
   $.adaptiveBackground = {
@@ -37,26 +40,29 @@
         var $this = $(this);
 
         if ( isRemoteImageURL( $this.attr('src') ) ){
-          console.log('Not processing remote image: ' + $this.attr('src'))
+          console.log('Not processing remote image: ' + $this.attr('src'));
           return;
         }
 
         /* Small helper function which applies colors, attrs, and triggers events. */
         var handleColors = function(){
-          var color = "rgb(" + ct.getColor( $this[0] ).join(',') + ")";
-          var palette = ct.getPalette( $this[0] );
+          var arrayToRGB = function(a){ return "rgb(" + a.join(',') + ")"; };
+          var color   = arrayToRGB( ct.getColor( $this[0] ) );
+          var palette = ct.getPalette( $this[0] )
+                          .map(function(a){ return arrayToRGB(a); });
+
           $this.attr(DATA_COLOR, color);
           $this.trigger(EVENT_CF, { color: color, palette: palette });
-        }
+        };
 
         /* Subscribe to our color-found event. */
         $this.on( EVENT_CF, function(ev, data){
           var $parent;
           if ( $this.attr( DATA_PARENT ) ){
-            $parent = $this.parents( $this.attr( DATA_PARENT ) )
+            $parent = $this.parents( $this.attr( DATA_PARENT ) );
           } 
           else if (opts.parent) {
-            $parent = $this.parents( opts.parent )
+            $parent = $this.parents( opts.parent );
           }
           else {
             $parent = $this.parent();
