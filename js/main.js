@@ -40,7 +40,7 @@
              .attr('data-colored', 1);
 
     }, { 
-      offset: '75%'
+      offset: '65%'
     })
 
     // Tweet button.

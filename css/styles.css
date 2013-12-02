@@ -737,3 +737,17 @@ body footer {
 body footer .twitter-wrap {
   margin-top: 20px;
 }
+/* line 195, ../_scss/styles.scss */
+body footer a, body footer a:hover {
+  border-bottom: 2px solid rgba(27, 37, 45, 0.6);
+  text-decoration: none;
+  color: #1b252d;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+/* line 200, ../_scss/styles.scss */
+body footer a:hover, body footer a:hover:hover {
+  border-bottom-color: white;
+}

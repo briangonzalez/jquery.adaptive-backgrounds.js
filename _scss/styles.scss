@@ -191,6 +191,14 @@ body{
     .twitter-wrap{
       margin-top: $rhythm/4;
     }
+
+    a, a:hover { 
+      border-bottom: 2px solid rgba($darkblue, 0.6); 
+      text-decoration: none;
+      color: $darkblue;
+      @include transition(all 0.25s ease);
+      &:hover{ border-bottom-color: white };
+    }
   }
 
 }
