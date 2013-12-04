@@ -19,7 +19,10 @@ $rhythm: 80px;
 // Colors ------
 $darkgrey: #333;
 $lightgrey: #eee;
-$darkblue: #1b252d;
+$darkblue: #56575c;
+
+$yellow: #eac56a;
+$red: #d27f6d;
 
 body{
   font-family: Lato, arial;
@@ -108,7 +111,7 @@ body{
         display: inline-block; 
         width: $box-length; 
         height: $box-length; 
-        background: #7c2518; 
+        background: $red; 
         opacity: 0.85;
         margin-left: -$box-length/3;
         border: 1px solid rgba(white, 0.5);
@@ -116,9 +119,9 @@ body{
         @include transform( rotate(0deg) );
         @include transform-origin( 50% 50% );
 
-        &.first   { @include transform( rotate(0deg) translateX(-50px) ); @include animation(0.5s, 3s, rotate-first,  1); background: #a27c31; }
+        &.first   { @include transform( rotate(0deg) translateX(-50px) ); @include animation(0.5s, 3s, rotate-first,  1); background: $yellow; }
         &.second  { @include transform( rotate(0deg) );                   @include animation(0.5s, 3s, rotate-second, 1); }
-        &.third   { @include transform( rotate(0deg) translateX(50px) );  @include animation(0.5s, 3s, rotate-third,  1); background: #1b252d;}
+        &.third   { @include transform( rotate(0deg) translateX(50px) );  @include animation(0.5s, 3s, rotate-third,  1); background: $darkblue;}
       }
     }
 

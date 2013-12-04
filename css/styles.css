@@ -415,18 +415,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
-/* line 24, ../_scss/styles.scss */
+/* line 27, ../_scss/styles.scss */
 body {
   font-family: Lato, arial;
   background: #eeeeee;
   overflow-x: hidden;
   line-height: 1.6em;
 }
-/* line 30, ../_scss/styles.scss */
+/* line 33, ../_scss/styles.scss */
 body * {
   box-sizing: border-box;
 }
-/* line 32, ../_scss/styles.scss */
+/* line 35, ../_scss/styles.scss */
 body .image-wrapper {
   text-align: center;
   -webkit-transition: all 0.5s ease;
@@ -434,14 +434,14 @@ body .image-wrapper {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 36, ../_scss/styles.scss */
+/* line 39, ../_scss/styles.scss */
 body .image-wrapper .inner {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
 }
-/* line 42, ../_scss/styles.scss */
+/* line 45, ../_scss/styles.scss */
 body .image-wrapper .inner:after, body .image-wrapper .inner:before {
   content: '';
   position: absolute;
@@ -458,7 +458,7 @@ body .image-wrapper .inner:after, body .image-wrapper .inner:before {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 55, ../_scss/styles.scss */
+/* line 58, ../_scss/styles.scss */
 body .image-wrapper .inner:after {
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
@@ -466,7 +466,7 @@ body .image-wrapper .inner:after {
   -o-transform: rotate(135deg);
   transform: rotate(135deg);
 }
-/* line 59, ../_scss/styles.scss */
+/* line 62, ../_scss/styles.scss */
 body .image-wrapper .inner .color {
   position: absolute;
   top: 0;
@@ -485,7 +485,7 @@ body .image-wrapper .inner .color {
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/* line 70, ../_scss/styles.scss */
+/* line 73, ../_scss/styles.scss */
 body .image-wrapper .inner .color .swatch {
   display: inline-block;
   width: 10px;
@@ -493,11 +493,11 @@ body .image-wrapper .inner .color .swatch {
   background: red;
   margin-right: 5px;
 }
-/* line 77, ../_scss/styles.scss */
+/* line 80, ../_scss/styles.scss */
 body .image-wrapper .inner:hover .color {
   opacity: 1;
 }
-/* line 81, ../_scss/styles.scss */
+/* line 84, ../_scss/styles.scss */
 body .image-wrapper img {
   width: 50%;
   min-width: 250px;
@@ -511,25 +511,25 @@ body .image-wrapper img {
   position: relative;
   z-index: 10;
 }
-/* line 95, ../_scss/styles.scss */
+/* line 98, ../_scss/styles.scss */
 body header {
   text-align: center;
   color: #333;
   padding: 160px 0;
 }
-/* line 100, ../_scss/styles.scss */
+/* line 103, ../_scss/styles.scss */
 body header .logo {
   width: 120px;
   height: 40px;
   display: inline-block;
   margin-bottom: 40px;
 }
-/* line 107, ../_scss/styles.scss */
+/* line 110, ../_scss/styles.scss */
 body header .logo .box {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: #7c2518;
+  background: #d27f6d;
   opacity: 0.85;
   margin-left: -13.33333px;
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -545,7 +545,7 @@ body header .logo .box {
   -o-transform-origin: 50% 50% 50%;
   transform-origin: 50% 50% 50%;
 }
-/* line 119, ../_scss/styles.scss */
+/* line 122, ../_scss/styles.scss */
 body header .logo .box.first {
   -webkit-transform: rotate(0deg) translateX(-50px);
   -moz-transform: rotate(0deg) translateX(-50px);
@@ -570,9 +570,9 @@ body header .logo .box.first {
   animation-fill-mode: forwards;
   /* this prevents the animation from restarting! */
   animation-iteration-count: 1;
-  background: #a27c31;
+  background: #eac56a;
 }
-/* line 120, ../_scss/styles.scss */
+/* line 123, ../_scss/styles.scss */
 body header .logo .box.second {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -598,7 +598,7 @@ body header .logo .box.second {
   /* this prevents the animation from restarting! */
   animation-iteration-count: 1;
 }
-/* line 121, ../_scss/styles.scss */
+/* line 124, ../_scss/styles.scss */
 body header .logo .box.third {
   -webkit-transform: rotate(0deg) translateX(50px);
   -moz-transform: rotate(0deg) translateX(50px);
@@ -623,54 +623,54 @@ body header .logo .box.third {
   animation-fill-mode: forwards;
   /* this prevents the animation from restarting! */
   animation-iteration-count: 1;
-  background: #1b252d;
+  background: #56575c;
 }
-/* line 125, ../_scss/styles.scss */
+/* line 128, ../_scss/styles.scss */
 body header h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 160%;
   margin-bottom: 0.25em;
   font-weight: 300;
-  color: #576169;
+  color: #929398;
   font-family: Raleway;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
 }
 @media only screen and (min-width: 500px) {
-  /* line 125, ../_scss/styles.scss */
+  /* line 128, ../_scss/styles.scss */
   body header h1 {
     font-size: 200%;
   }
 }
 @media only screen and (min-width: 750px) {
-  /* line 125, ../_scss/styles.scss */
+  /* line 128, ../_scss/styles.scss */
   body header h1 {
     font-size: 300%;
   }
 }
-/* line 139, ../_scss/styles.scss */
+/* line 142, ../_scss/styles.scss */
 body header h3 {
   font-weight: 300;
   font-size: 100%;
   padding: 0 3em;
   letter-spacing: 1px;
-  color: #7f8991;
+  color: #babbc0;
 }
 @media only screen and (min-width: 500px) {
-  /* line 139, ../_scss/styles.scss */
+  /* line 142, ../_scss/styles.scss */
   body header h3 {
     font-size: 110%;
   }
 }
 @media only screen and (min-width: 750px) {
-  /* line 139, ../_scss/styles.scss */
+  /* line 142, ../_scss/styles.scss */
   body header h3 {
     font-size: 120%;
   }
 }
-/* line 149, ../_scss/styles.scss */
+/* line 152, ../_scss/styles.scss */
 body header a.button {
-  background: #39434b;
+  background: #74757a;
   margin-top: 40px;
   padding: 13.33333px 26.66667px;
   border: none;
@@ -692,26 +692,26 @@ body header a.button {
   box-shadow: 0 1px 0 #dadada, 0 2px 0 #dadada, 0 3px 0 #dadada, 0 4px 0 #dadada;
 }
 @media only screen and (min-width: 500px) {
-  /* line 149, ../_scss/styles.scss */
+  /* line 152, ../_scss/styles.scss */
   body header a.button {
     display: inline-block;
     width: auto;
   }
-  /* line 176, ../_scss/styles.scss */
+  /* line 179, ../_scss/styles.scss */
   body header a.button.tweet {
     margin-top: 40px;
   }
 }
-/* line 179, ../_scss/styles.scss */
+/* line 182, ../_scss/styles.scss */
 body header a.button:hover {
   -webkit-transform: translateY(-1px);
   -moz-transform: translateY(-1px);
   -ms-transform: translateY(-1px);
   -o-transform: translateY(-1px);
   transform: translateY(-1px);
-  background: #434d55;
+  background: #7e7f84;
 }
-/* line 180, ../_scss/styles.scss */
+/* line 183, ../_scss/styles.scss */
 body header a.button:active {
   -webkit-transform: translateY(3px);
   -moz-transform: translateY(3px);
@@ -719,35 +719,35 @@ body header a.button:active {
   -o-transform: translateY(3px);
   transform: translateY(3px);
 }
-/* line 181, ../_scss/styles.scss */
+/* line 184, ../_scss/styles.scss */
 body header a.button.mr {
   margin-right: 5px;
 }
-/* line 182, ../_scss/styles.scss */
+/* line 185, ../_scss/styles.scss */
 body header a.button.tweet {
   margin-top: 10px;
 }
-/* line 186, ../_scss/styles.scss */
+/* line 189, ../_scss/styles.scss */
 body footer {
   background: #eeeeee;
   padding: 80px 20px;
   text-align: center;
 }
-/* line 191, ../_scss/styles.scss */
+/* line 194, ../_scss/styles.scss */
 body footer .twitter-wrap {
   margin-top: 20px;
 }
-/* line 195, ../_scss/styles.scss */
+/* line 198, ../_scss/styles.scss */
 body footer a, body footer a:hover {
-  border-bottom: 2px solid rgba(27, 37, 45, 0.6);
+  border-bottom: 2px solid rgba(86, 87, 92, 0.6);
   text-decoration: none;
-  color: #1b252d;
+  color: #56575c;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/* line 200, ../_scss/styles.scss */
+/* line 203, ../_scss/styles.scss */
 body footer a:hover, body footer a:hover:hover {
   border-bottom-color: white;
 }
