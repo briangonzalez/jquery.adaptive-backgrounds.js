@@ -1,7 +1,8 @@
-
 jquery.adaptive-background.js
 ===============================
 _A simple jQuery plugin to extract the dominant color of an image and apply it to the background of its parent element._
+
+**[Check it out on the web!](http://briangonzalez.github.io/jquery.adaptive-backgrounds.js/)**
 
 Getting Started
 ------------------
