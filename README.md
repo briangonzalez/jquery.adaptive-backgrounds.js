@@ -55,8 +55,8 @@ Subscribe to the `ab-color-found` event like so:
 
 ```javascript
 $('img.my-image').on('ab-color-found', function(payload){
-  console.log(payload.color); // The dominant color.
-  console.log(palette);       // The palette in the image.
+  console.log(payload.color);   // The dominant color in the image.
+  console.log(payload.palette); // The color palette found in the image.
 });
 ```
 
