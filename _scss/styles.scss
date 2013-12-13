@@ -106,6 +106,7 @@ body{
       height: $box-length;
       display: inline-block;
       margin-bottom: $rhythm/2;
+      margin-right: -$box-length/2;
 
       .box{ 
         display: inline-block; 

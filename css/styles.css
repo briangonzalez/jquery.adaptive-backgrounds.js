@@ -523,8 +523,9 @@ body header .logo {
   height: 40px;
   display: inline-block;
   margin-bottom: 40px;
+  margin-right: -20px;
 }
-/* line 110, ../_scss/styles.scss */
+/* line 111, ../_scss/styles.scss */
 body header .logo .box {
   display: inline-block;
   width: 40px;
@@ -545,7 +546,7 @@ body header .logo .box {
   -o-transform-origin: 50% 50% 50%;
   transform-origin: 50% 50% 50%;
 }
-/* line 122, ../_scss/styles.scss */
+/* line 123, ../_scss/styles.scss */
 body header .logo .box.first {
   -webkit-transform: rotate(0deg) translateX(-50px);
   -moz-transform: rotate(0deg) translateX(-50px);
@@ -572,7 +573,7 @@ body header .logo .box.first {
   animation-iteration-count: 1;
   background: #eac56a;
 }
-/* line 123, ../_scss/styles.scss */
+/* line 124, ../_scss/styles.scss */
 body header .logo .box.second {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -598,7 +599,7 @@ body header .logo .box.second {
   /* this prevents the animation from restarting! */
   animation-iteration-count: 1;
 }
-/* line 124, ../_scss/styles.scss */
+/* line 125, ../_scss/styles.scss */
 body header .logo .box.third {
   -webkit-transform: rotate(0deg) translateX(50px);
   -moz-transform: rotate(0deg) translateX(50px);
@@ -625,7 +626,7 @@ body header .logo .box.third {
   animation-iteration-count: 1;
   background: #56575c;
 }
-/* line 128, ../_scss/styles.scss */
+/* line 129, ../_scss/styles.scss */
 body header h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -637,18 +638,18 @@ body header h1 {
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
 }
 @media only screen and (min-width: 500px) {
-  /* line 128, ../_scss/styles.scss */
+  /* line 129, ../_scss/styles.scss */
   body header h1 {
     font-size: 200%;
   }
 }
 @media only screen and (min-width: 750px) {
-  /* line 128, ../_scss/styles.scss */
+  /* line 129, ../_scss/styles.scss */
   body header h1 {
     font-size: 300%;
   }
 }
-/* line 142, ../_scss/styles.scss */
+/* line 143, ../_scss/styles.scss */
 body header h3 {
   font-weight: 300;
   font-size: 100%;
@@ -657,18 +658,18 @@ body header h3 {
   color: #babbc0;
 }
 @media only screen and (min-width: 500px) {
-  /* line 142, ../_scss/styles.scss */
+  /* line 143, ../_scss/styles.scss */
   body header h3 {
     font-size: 110%;
   }
 }
 @media only screen and (min-width: 750px) {
-  /* line 142, ../_scss/styles.scss */
+  /* line 143, ../_scss/styles.scss */
   body header h3 {
     font-size: 120%;
   }
 }
-/* line 152, ../_scss/styles.scss */
+/* line 153, ../_scss/styles.scss */
 body header a.button {
   background: #74757a;
   margin-top: 40px;
@@ -692,17 +693,17 @@ body header a.button {
   box-shadow: 0 1px 0 #dadada, 0 2px 0 #dadada, 0 3px 0 #dadada, 0 4px 0 #dadada;
 }
 @media only screen and (min-width: 500px) {
-  /* line 152, ../_scss/styles.scss */
+  /* line 153, ../_scss/styles.scss */
   body header a.button {
     display: inline-block;
     width: auto;
   }
-  /* line 179, ../_scss/styles.scss */
+  /* line 180, ../_scss/styles.scss */
   body header a.button.tweet {
     margin-top: 40px;
   }
 }
-/* line 182, ../_scss/styles.scss */
+/* line 183, ../_scss/styles.scss */
 body header a.button:hover {
   -webkit-transform: translateY(-1px);
   -moz-transform: translateY(-1px);
@@ -711,7 +712,7 @@ body header a.button:hover {
   transform: translateY(-1px);
   background: #7e7f84;
 }
-/* line 183, ../_scss/styles.scss */
+/* line 184, ../_scss/styles.scss */
 body header a.button:active {
   -webkit-transform: translateY(3px);
   -moz-transform: translateY(3px);
@@ -719,25 +720,25 @@ body header a.button:active {
   -o-transform: translateY(3px);
   transform: translateY(3px);
 }
-/* line 184, ../_scss/styles.scss */
+/* line 185, ../_scss/styles.scss */
 body header a.button.mr {
   margin-right: 5px;
 }
-/* line 185, ../_scss/styles.scss */
+/* line 186, ../_scss/styles.scss */
 body header a.button.tweet {
   margin-top: 10px;
 }
-/* line 189, ../_scss/styles.scss */
+/* line 190, ../_scss/styles.scss */
 body footer {
   background: #eeeeee;
   padding: 80px 20px;
   text-align: center;
 }
-/* line 194, ../_scss/styles.scss */
+/* line 195, ../_scss/styles.scss */
 body footer .twitter-wrap {
   margin-top: 20px;
 }
-/* line 198, ../_scss/styles.scss */
+/* line 199, ../_scss/styles.scss */
 body footer a, body footer a:hover {
   border-bottom: 2px solid rgba(86, 87, 92, 0.6);
   text-decoration: none;
@@ -747,7 +748,7 @@ body footer a, body footer a:hover {
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/* line 203, ../_scss/styles.scss */
+/* line 204, ../_scss/styles.scss */
 body footer a:hover, body footer a:hover:hover {
   border-bottom-color: white;
 }
