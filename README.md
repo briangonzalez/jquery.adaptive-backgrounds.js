@@ -62,7 +62,7 @@ $('img.my-image').on('ab-color-found', function(payload){
 
 Caveats
 --------------
-This plugin utlizes [Color Thief](http://lokeshdhakar.com/projects/color-thief/) which in turn uses the Canvas. The script will silently fail if one tries to extract the colors from an image not hosted in the current domain. 
+This plugin utlizes the `<canvas>` element and the `ImageData` object, and due to cross-site security limitations, the script will silently fail if one tries to extract the colors from an image not hosted on the current domain. This plugin is built on top of a script called [RGBaster](https://github.com/briangonzalez/rgbaster.js). 
 
 Author
 -------
