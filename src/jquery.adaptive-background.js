@@ -13,16 +13,9 @@
     parent:     null,
   };
 
-  /* Helper function for detecting remote images.  */ 
-  var isRemoteImageURL = function(url){
-    var parser = document.createElement('a');
-    parser.href = url;
-    return !(parser.hostname === location.hostname && parser.protocol === location.protocol && parser.port === location.port);
-  };
-
   // Include RGBaster - https://github.com/briangonzalez/rgbaster.js
   /* jshint ignore:start */
-  (function(n,t){var a=function(){return document.createElement("canvas").getContext("2d")};var e=function(n){var t=new Image;t.src=n.src;var e=a();e.drawImage(n,0,0);var r=e.getImageData(0,0,n.width,n.height);return r.data};var r=function(n){return["rgb(",n,")"].join("")};var o=function(n){return n.map(function(n){return r(n.name)})};var i=5;var u=10;var c={};c.colors=function(n){var t=e(n),a=t.length,c=0,m=-(i-1);var l={},v="",f=[],d={dominant:{name:"",count:0},palette:Array.apply(null,Array(u)).map(Boolean).map(function(n){return{name:"0,0,0",count:0}})};while((m+=i*4)<a){++c;f[0]=t[m];f[1]=t[m+1];f[2]=t[m+2];v=f.join(",");if(v in l){l[v]=l[v]+1}else{l[v]=1}if(v!=="0,0,0"){var p=l[v];if(p>d.dominant.count){d.dominant.name=v;d.dominant.count=p}else{d.palette.some(function(n){if(p>n.count){n.name=v;n.count=p;return true}})}}}return{dominant:r(d.dominant.name),palette:o(d.palette)}};n.RGBaster=n.RGBaster||c})(window);
+  (function(n,t){var a=function(){return document.createElement("canvas").getContext("2d")};var e=function(n,t){var e=new Image;e.crossOrigin="Anonymous";e.src=n.src;e.onload=function(){var r=a();r.drawImage(e,0,0);var o=r.getImageData(0,0,n.width,n.height);t&&t(o.data)}};var r=function(n){return["rgb(",n,")"].join("")};var o=function(n){return n.map(function(n){return r(n.name)})};var i=5;var u=10;var c={};c.colors=function(n,t,a){e(n,function(n){var e=n.length,c={},m="",f=[],l={dominant:{name:"",count:0},palette:Array.apply(null,Array(a||u)).map(Boolean).map(function(n){return{name:"0,0,0",count:0}})};var v=0;while(v<e){f[0]=n[v];f[1]=n[v+1];f[2]=n[v+2];m=f.join(",");if(m in c){c[m]=c[m]+1}else{c[m]=1}if(m!=="0,0,0"&&m!=="255,255,255"){var d=c[m];if(d>l.dominant.count){l.dominant.name=m;l.dominant.count=d}else{l.palette.some(function(n){if(d>n.count){n.name=m;n.count=d;return true}})}}v+=i*4}t&&t({dominant:r(l.dominant.name),palette:o(l.palette)})})};n.RGBaster=n.RGBaster||c})(window);
    /* jshint ignore:end */
 
   /* Our main function declaration. */ 
@@ -37,17 +30,12 @@
       $( opts.selector ).each(function(index, el){
         var $this = $(this);
 
-        if ( isRemoteImageURL( $this.attr('src') ) ){
-          console.log('Not processing remote image: ' + $this.attr('src'));
-          return;
-        }
-
         /* Small helper function which applies colors, attrs, and triggers events. */
         var handleColors = function(){
-          var colors = RGBaster.colors($this[0]);
-  
-          $this.attr(DATA_COLOR, colors.dominant);
-          $this.trigger(EVENT_CF, { color: colors.dominant, palette: colors.palette });
+          RGBaster.colors($this[0], function(colors){
+            $this.attr(DATA_COLOR, colors.dominant);
+            $this.trigger(EVENT_CF, { color: colors.dominant, palette: colors.palette });
+          }, 20);
         };
 
         /* Subscribe to our color-found event. */
@@ -66,8 +54,8 @@
           $parent.css({ backgroundColor: data.color });
         });
 
-        /* Either wait for image to load, or handle the colors now if image is loaded. */ 
-        $this[0].complete ? handleColors() : $this.load( handleColors );
+        /* Handle the colors. */ 
+        handleColors();
 
       });
     },
