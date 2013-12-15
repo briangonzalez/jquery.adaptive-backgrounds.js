@@ -67,16 +67,16 @@ This plugin utlizes the `<canvas>` element and the `ImageData` object, and due t
 To enable CORS for images hosted on S3 buckets, follow the Amazon guide [here](http://docs.aws.amazon.com/AmazonS3/latest/UG/EditingBucketPermissions.html); adding the following to the bucket's CORS configuration:
 
 ```xml
- <CORSRule>
-   <AllowedOrigin>*</AllowedOrigin>
-   <AllowedMethod>GET</AllowedMethod>
- </CORSRule>
+<CORSRule>
+ <AllowedOrigin>*</AllowedOrigin>
+ <AllowedMethod>GET</AllowedMethod>
+</CORSRule>
 ```
  
 For all images, you can optionally also include a cross-origin attribute in your image. This is not absolutely necessary since the `anonymous` origin is set in the Javascript code.
 
 ```html
-   <img src="/image.jpg" data-adaptive-background='1' cross-origin="anonymous"/>
+<img src="/image.jpg" data-adaptive-background='1' cross-origin="anonymous"/>
 ```
 
 Credit
