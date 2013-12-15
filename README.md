@@ -64,7 +64,8 @@ Caveats
 --------------
 This plugin utlizes the `<canvas>` element and the `ImageData` object, and due to cross-site security limitations, the script will fail if one tries to extract the colors from an image not hosted on the current domain, *unless* the image allows for [Cross Origin Resource Sharing](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing). 
 
-To enable CORS for images hosted on S3 buckets follow the Amazon guide [here](http://docs.aws.amazon.com/AmazonS3/latest/UG/EditingBucketPermissions.html); adding the folloing to the buckets CORS configuration
+To enable CORS for images hosted on S3 buckets, follow the Amazon guide [here](http://docs.aws.amazon.com/AmazonS3/latest/UG/EditingBucketPermissions.html); adding the following to the bucket's CORS configuration:
+
 ```xml
  <CORSRule>
    <AllowedOrigin>*</AllowedOrigin>
@@ -72,11 +73,14 @@ To enable CORS for images hosted on S3 buckets follow the Amazon guide [here](ht
  </CORSRule>
 ```
  
-For all images you should also include a cross-origin attribute in your image
+For all images, you can optionally also include a cross-origin attribute in your image. This is not absolutely necessary since the `anonymous` origin is set in the Javascript code.
+
 ```html
-   <img src="/image.jpg" data-adaptive-background='1' cross-origin="anonymous" />
+   <img src="/image.jpg" data-adaptive-background='1' cross-origin="anonymous"/>
 ```
 
+Credit
+------
 This plugin is built on top of a script called [RGBaster](https://github.com/briangonzalez/rgbaster.js). 
 
 Author
