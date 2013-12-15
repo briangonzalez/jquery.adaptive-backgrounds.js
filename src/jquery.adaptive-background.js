@@ -11,6 +11,9 @@
   var DEFAULTS      = {
     selector:   'img[data-adaptive-background="1"]',
     parent:     null,
+    changeTxtColor: false,
+    parentTxtLight: "#fff",
+    parentTxtDark: "#000",
   };
 
   // Include RGBaster - https://github.com/briangonzalez/rgbaster.js
@@ -40,6 +43,7 @@
 
         /* Subscribe to our color-found event. */
         $this.on( EVENT_CF, function(ev, data){
+          var $data = data;
           var $parent;
           if ( $this.attr( DATA_PARENT ) ){
             $parent = $this.parents( $this.attr( DATA_PARENT ) );
@@ -52,6 +56,17 @@
           }
 
           $parent.css({ backgroundColor: data.color });
+
+          if (opts.changeTxtColor){ 
+            /* Small helper function for calculating color contrast */
+            var getTxtColor = function (){
+              var rgb = $data.color.match(/\d+/g);
+              var yiq = ((rgb[0]*299)+(rgb[1]*587)+(rgb[2]*114))/1000;
+              return yiq >= 128 ? opts.parentTxtDark : opts.parentTxtLight;
+            };
+
+            $parent.css({ color: getTxtColor });
+          }
         });
 
         /* Handle the colors. */ 
