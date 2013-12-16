@@ -1,4 +1,5 @@
-jquery.adaptive-background.js
+
+<img src='http://briangonzalez.github.io/jquery.adaptive-backgrounds.js/favicon.png?2' height='30'> jquery.adaptive-backgrounds.js
 ===============================
 _A simple jQuery plugin to extract the dominant color of an image and apply it to the background of its parent element._
 
