@@ -738,7 +738,11 @@ body footer {
 body footer .twitter-wrap {
   margin-top: 20px;
 }
-/* line 199, ../_scss/styles.scss */
+/* line 198, ../_scss/styles.scss */
+body footer .twitter-wrap .gh-star {
+  margin-top: 20px;
+}
+/* line 201, ../_scss/styles.scss */
 body footer a, body footer a:hover {
   border-bottom: 2px solid rgba(86, 87, 92, 0.6);
   text-decoration: none;
@@ -748,7 +752,7 @@ body footer a, body footer a:hover {
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/* line 204, ../_scss/styles.scss */
+/* line 206, ../_scss/styles.scss */
 body footer a:hover, body footer a:hover:hover {
   border-bottom-color: white;
 }
