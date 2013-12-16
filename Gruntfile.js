@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['src/jquery.adaptive-background.js'],
+        src: ['src/jquery.adaptive-backgrounds.js'],
         dest: 'src/<%= pkg.name %>.js'
       }
     },
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
       files: ['test/**/*.html']
     },
     jshint: {
-      files: ['gruntfile.js', 'src/jquery.adaptive-background.js', 'test/test.js'],
+      files: ['gruntfile.js', 'src/jquery.adaptive-backgrounds.js', 'test/test.js'],
       options: {
         // options here to override JSHint defaults
         globals: {

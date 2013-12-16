@@ -1,10 +1,10 @@
 {
   "author": "Brian Gonzalez",
-  "name": "jquery.adaptive-background",
+  "name": "jquery.adaptive-backgrounds",
   "description": "A simple jQuery plugin to extract the dominant color of an image and apply it to the background of its parent element.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "repository": {
-    "url": "briangonzalez.org/adaptive-background"
+    "url": "http://briangonzalez.github.io/jquery.adaptive-backgrounds.js/"
   },
   "main": "./lib/main",
   "dependencies": {},
