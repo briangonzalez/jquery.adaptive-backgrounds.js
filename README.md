@@ -1,4 +1,3 @@
-
 <img src='http://briangonzalez.github.io/jquery.adaptive-backgrounds.js/favicon.png?2' height='30'> jquery.adaptive-backgrounds.js
 ===============================
 _A simple jQuery plugin to extract the dominant color of an image and apply it to the background of its parent element._
@@ -76,7 +75,7 @@ To enable CORS for images hosted on S3 buckets, follow the Amazon guide [here](h
 </CORSRule>
 ```
  
-For all images, you can optionally also include a cross-origin attribute in your image. This is not absolutely necessary since the `anonymous` origin is set in the Javascript code.
+For all images, you can optionally also include a cross-origin attribute in your image. This is not absolutely necessary since the `anonymous` origin is set in the Javascript code, but kudos to you for being a super-developer.
 
 ```html
 <img src="/image.jpg" data-adaptive-background='1' cross-origin="anonymous"/>
