@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Normalized Text</title>
+
+  <script type="text/javascript" src='/lib/jquery.js'></script>
+  <script type="text/javascript" src='/src/jquery.adaptive-backgrounds.js'></script>
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+    $.adaptiveBackground.run({
+      normalizeTextColor: true
+    })
+  });
+
+  </script>
+
+  <style type="text/css"> 
+
+    body{
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .img-wrap{
+      border: 2px solid #ccc;
+      width: 600px; 
+      position: absolute;
+      top: 50%; left: 50%;
+      text-align: center;
+      color: red;
+      transform: translateY(-50%) translateX(-50%);
+      -webkit-transform: translateY(-50%) translateX(-50%);
+    }
+
+    .img-wrap img{
+      height: 100%;
+      height: 300px;
+    }
+
+    .img-wrap .text{
+      font-family: Arial;
+      font-size: 100px;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class='img-wrap'>
+      <div class='text'>WOW</div>
+      <img id="img" src="images/3.jpg" data-adaptive-background='1'>
+  </div>
+
+</body>
+</html>
