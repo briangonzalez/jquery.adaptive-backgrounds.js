@@ -34,6 +34,9 @@ Default Options
 ----------------
 - __selector__ String _(default: `'img[data-adaptive-background="1"]'`)_ a CSS selector which denotes which images to grab/process. Ideally, this selector would start with _img_, to ensure we only grab and try to process actual images.
 - __parent__ falsy _(default: `null`)_ a CSS selector which denotes which parent to apply the background color to. By default, the color is applied to the parent one level up the DOM tree.
+- __normalizeTextColor__ boolean _(default: `false`)_ option to normalize the color of the parent text if background color is too dark or too light
+- __normalizedTextColors__ Object Literal _(default: `{dark: '#000', light: '#fff'}`)_ text colors used when background is either too dark/light
+
 
 __Example:__
 Call the `run` method, passing in any options you'd like to override.
