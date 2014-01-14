@@ -20,7 +20,7 @@ The script looks for image(s) with the `data-adaptive-background` attribute:
 <img src="/image.jpg" data-adaptive-background='1'>
 ```
 
-__Using an element with a CSS Background Image__
+### Using an element with a CSS background mmage
 
 Instead of using an `<img>` element nested inside of parent element, AB supports grabbing the dominant color of a background image of a standalone element, then applying the corresponding dominant color as the background color of said element. Enable this functionality by adding a data property, `data-ab-css-background` to the element. See the example below:
 
