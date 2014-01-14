@@ -6,7 +6,7 @@ _A simple jQuery plugin to extract the dominant color of an image and apply it t
 
 Getting Started
 ------------------
-Simply include jQuery and the __[script](https://raw.github.com/briangonzalez/jquery.adaptive-backgrounds.js/master/src/jquery.pep.js)__ in your page, then run the script like so:
+Simply include jQuery and the __[script](https://raw2.github.com/briangonzalez/jquery.adaptive-backgrounds.js/master/dist/jquery.adaptive-backgrounds.min.js)__ in your page, then run the script like so:
 
 ```javascript
 $(document).ready(function(){
