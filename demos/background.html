@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background</title>
+
+  <script type="text/javascript" src='/lib/jquery.js'></script>
+  <script type="text/javascript" src='/src/jquery.adaptive-backgrounds.js'></script>
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+    $.adaptiveBackground.run();
+  });
+
+  </script>
+
+  <style type="text/css"> 
+
+    body{
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .img-wrap{
+      border: 2px solid #ccc;
+      height: 500px;
+      width: 500px; 
+      position: absolute;
+      top: 50%; left: 50%;
+      text-align: center;
+      -webkit-transform: translateY(-50%) translateX(-50%);
+      background-image: url('images/3.jpg');
+      background-size: 200px 300px;
+      background-repeat: no-repeat;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class='img-wrap' data-adaptive-background='1' data-ab-css-background='1'>
+  </div>
+
+</body>
+</html>
