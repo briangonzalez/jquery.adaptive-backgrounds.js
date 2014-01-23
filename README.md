@@ -52,11 +52,20 @@ __Example:__
 Call the `run` method, passing in any options you'd like to override.
 
 ```javascript
-var opts = {
-  selector: '.some-selector',
-  parent:   '.some-parent-of-some-selector'
-}
-$.adaptiveBackground.run(opts)
+var defaults      = {
+  selector:             '[data-adaptive-background="1"]',
+  parent:               null,
+  normalizeTextColor:   false,
+  normalizedTextColors:  {
+    light:      "#fff",
+    dark:       "#000"
+  },
+  lumaClasses:  {
+    light:      "ab-light",
+    dark:       "ab-dark"
+  }
+};
+$.adaptiveBackground.run(defaults)
 ```
 
 Events Emitted
