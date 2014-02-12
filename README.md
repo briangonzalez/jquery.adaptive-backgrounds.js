@@ -76,9 +76,10 @@ __Example:__
 Subscribe to the `ab-color-found` event like so:
 
 ```javascript
-$('img.my-image').on('ab-color-found', function(payload){
+$('img.my-image').on('ab-color-found', function(ev,payload){
   console.log(payload.color);   // The dominant color in the image.
   console.log(payload.palette); // The color palette found in the image.
+  console.log(ev);   // The jQuery.Event object
 });
 ```
 
