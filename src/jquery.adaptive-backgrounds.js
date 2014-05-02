@@ -69,14 +69,14 @@
           var $data = data;
           var $parent;
 
-          if ( useCSSBackground() ){
-            $parent = $this;
+          if ( opts.parent && $this.parents( opts.parent ).length ) {
+            $parent = $this.parents( opts.parent );
           }
-          else if ( $this.attr( DATA_PARENT ) ){
+          else if ( $this.attr( DATA_PARENT ) && $this.parents( $this.attr( DATA_PARENT ) ).length ){
             $parent = $this.parents( $this.attr( DATA_PARENT ) );
           } 
-          else if (opts.parent) {
-            $parent = $this.parents( opts.parent );
+          else if ( useCSSBackground() ){
+            $parent = $this;
           }
           else {
             $parent = $this.parent();
