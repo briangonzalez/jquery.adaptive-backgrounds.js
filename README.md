@@ -11,7 +11,7 @@ _A simple jQuery plugin to extract the dominant color of an image and apply it t
 
 Getting Started
 ------------------
-Simply include jQuery and the __[script](https://raw2.github.com/briangonzalez/jquery.adaptive-backgrounds.js/master/dist/jquery.adaptive-backgrounds.min.js)__ in your page, then run the script like so:
+Simply include jQuery and the __[script](https://raw2.github.com/briangonzalez/jquery.adaptive-backgrounds.js/master/src/jquery.adaptive-backgrounds.js)__ in your page, then run the script like so:
 
 ```javascript
 $(document).ready(function(){
@@ -27,17 +27,17 @@ The script looks for image(s) with the `data-adaptive-background` attribute:
 
 ### Using an element with a CSS background image
 
-Instead of using an `<img>` element nested inside of parent element, AB supports grabbing the dominant color of a background image of a standalone element, then applying the corresponding dominant color as the background color of said element. 
+Instead of using an `<img>` element nested inside of parent element, AB supports grabbing the dominant color of a background image of a standalone element, then applying the corresponding dominant color as the background color of said element.
 
 Enable this functionality by adding a data property, `data-ab-css-background` to the element. See the example below:
 
 ```html
 <div style='background-image: url(/some-image.jpg)' data-adaptive-background='1' data-ab-css-background='1'></div>
-``` 
+```
 
-Demo 
+Demo
 -----------
-Here's a little demo of how it works. (1) The page loads (2) the dominant background color of the image is extracted (3) said color is applied to parent of image. _Demo drastically slowed down to show effect_. 
+Here's a little demo of how it works. (1) The page loads (2) the dominant background color of the image is extracted (3) said color is applied to parent of image. _Demo drastically slowed down to show effect_.
 <img src="https://raw.github.com/briangonzalez/jquery.adaptive-background.js/master/misc/ab.gif">
 
 API
@@ -60,6 +60,7 @@ Call the `run` method, passing in any options you'd like to override.
 var defaults      = {
   selector:             '[data-adaptive-background="1"]',
   parent:               null,
+  exclude:              [ 'rgb(0,0,0)', 'rgba(255,255,255)' ],
   normalizeTextColor:   false,
   normalizedTextColors:  {
     light:      "#fff",
@@ -78,7 +79,7 @@ Events Emitted
 - __ab-color-found__ [Event](http://api.jquery.com/category/events/event-object/) This event is fired when the dominant color of the image is found. The payload includes the dominant color as well as the color palette contained in the image.
 
 __Example:__
-Subscribe to the `ab-color-found` event like so:
+Bind to the `ab-color-found` event like so:
 
 ```javascript
 $('img.my-image').on('ab-color-found', function(ev,payload){
@@ -90,7 +91,7 @@ $('img.my-image').on('ab-color-found', function(ev,payload){
 
 Caveats
 --------------
-This plugin utlizes the `<canvas>` element and the `ImageData` object, and due to cross-site security limitations, the script will fail if one tries to extract the colors from an image not hosted on the current domain, *unless* the image allows for [Cross Origin Resource Sharing](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing). 
+This plugin utlizes the `<canvas>` element and the `ImageData` object, and due to cross-site security limitations, the script will fail if one tries to extract the colors from an image not hosted on the current domain, *unless* the image allows for [Cross Origin Resource Sharing](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
 
 __Enabling CORS on S3__
 
@@ -102,7 +103,7 @@ To enable CORS for images hosted on S3 buckets, follow the Amazon guide [here](h
  <AllowedMethod>GET</AllowedMethod>
 </CORSRule>
 ```
- 
+
 For all images, you can optionally also include a cross-origin attribute in your image. This is not absolutely necessary since the `anonymous` origin is set in the Javascript code, but kudos to you for being a super-developer.
 
 ```html
@@ -111,7 +112,7 @@ For all images, you can optionally also include a cross-origin attribute in your
 
 Credit
 ------
-This plugin is built on top of a script called [RGBaster](https://github.com/briangonzalez/rgbaster.js). 
+This plugin is built on top of a script called [RGBaster](https://github.com/briangonzalez/rgbaster.js).
 
 Author
 -------

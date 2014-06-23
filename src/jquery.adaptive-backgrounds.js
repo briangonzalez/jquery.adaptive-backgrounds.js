@@ -3,7 +3,7 @@
 
 ;(function($){
 
-  /* Constants & defaults. */ 
+  /* Constants & defaults. */
   var DATA_COLOR    = 'data-ab-color';
   var DATA_PARENT   = 'data-ab-parent';
   var DATA_CSS_BG   = 'data-ab-css-background';
@@ -12,6 +12,7 @@
   var DEFAULTS      = {
     selector:             '[data-adaptive-background="1"]',
     parent:               null,
+    exclude:              [ 'rgb(0,0,0)', 'rgba(255,255,255)' ],
     normalizeTextColor:   false,
     normalizedTextColors:  {
       light:      "#fff",
@@ -25,34 +26,38 @@
 
   // Include RGBaster - https://github.com/briangonzalez/rgbaster.js
   /* jshint ignore:start */
-  !function(a){"use strict";var b=function(){return document.createElement("canvas").getContext("2d")},c=function(a,c){var d=new Image,e=a.src||a;"data:"!==e.substring(0,5)&&(d.crossOrigin="Anonymous"),d.onload=function(){var a=b();a.drawImage(d,0,0);var e=a.getImageData(0,0,d.width,d.height);c&&c(e.data)},d.src=e},d=function(a){return["rgb(",a,")"].join("")},e=function(a){return a.map(function(a){return d(a.name)})},f=5,g=10,h={};h.colors=function(a,b,h){c(a,function(a){for(var c=a.length,i={},j="",k=[],l={dominant:{name:"",count:0},palette:Array.apply(null,Array(h||g)).map(Boolean).map(function(){return{name:"0,0,0",count:0}})},m=0;c>m;){if(k[0]=a[m],k[1]=a[m+1],k[2]=a[m+2],j=k.join(","),i[j]=j in i?i[j]+1:1,"0,0,0"!==j&&"255,255,255"!==j){var n=i[j];n>l.dominant.count?(l.dominant.name=j,l.dominant.count=n):l.palette.some(function(a){return n>a.count?(a.name=j,a.count=n,!0):void 0})}m+=4*f}b&&b({dominant:d(l.dominant.name),palette:e(l.palette)})})},a.RGBaster=a.RGBaster||h}(window);
+  !function(n){"use strict";var t=function(){return document.createElement("canvas").getContext("2d")},e=function(n,e){var a=new Image,o=n.src||n;"data:"!==o.substring(0,5)&&(a.crossOrigin="Anonymous"),a.onload=function(){var n=t("2d");n.drawImage(a,0,0);var o=n.getImageData(0,0,a.width,a.height);e&&e(o.data)},a.src=o},a=function(n){return["rgb(",n,")"].join("")},o=function(n){return n.map(function(n){return a(n.name)})},r=5,i=10,c={};c.colors=function(n,t){t=t||{};var c=t.exclude||[],u=t.paletteSize||i;e(n,function(e){for(var i=n.width*n.height||e.length,m={},s="",d=[],f={dominant:{name:"",count:0},palette:Array.apply(null,new Array(u)).map(Boolean).map(function(){return{name:"0,0,0",count:0}})},l=0;i>l;){if(d[0]=e[l],d[1]=e[l+1],d[2]=e[l+2],s=d.join(","),m[s]=s in m?m[s]+1:1,-1===c.indexOf(a(s))){var g=m[s];g>f.dominant.count?(f.dominant.name=s,f.dominant.count=g):f.palette.some(function(n){return g>n.count?(n.name=s,n.count=g,!0):void 0})}l+=4*r}if(t.success){var p=o(f.palette);t.success({dominant:a(f.dominant.name),secondary:p[0],palette:p})}})},n.RGBaster=n.RGBaster||c}(window);
   /* jshint ignore:end */
 
-  
-  /* 
-    Our main function declaration. 
-  */ 
+
+  /*
+    Our main function declaration.
+  */
   $.adaptiveBackground = {
     run: function( options ){
       var opts = $.extend({}, DEFAULTS, options);
 
-      /* Loop over each element, waiting for it to load  
-         then finding its color, and triggering the 
+      /* Loop over each element, waiting for it to load
+         then finding its color, and triggering the
          color found event when color has been found.
-      */ 
+      */
       $( opts.selector ).each(function(index, el){
         var $this = $(this);
 
-        /*  Small helper functions which applie 
-            colors, attrs, triggers events, and check for css 
+        /*  Small helper functions which applie
+            colors, attrs, triggers events, and check for css
         */
         var handleColors = function(){
           var img = useCSSBackground() ? CSSBackground() : $this[0];
 
-          RGBaster.colors(img, function(colors){
-            $this.attr(DATA_COLOR, colors.dominant);
-            $this.trigger(EVENT_CF, { color: colors.dominant, palette: colors.palette });
-          }, 20);
+          RGBaster.colors(img, {
+            paletteSize: 20,
+            exclude: opts.exclude,
+            success: function(colors) {
+              $this.attr(DATA_COLOR, colors.dominant);
+              $this.trigger(EVENT_CF, { color: colors.dominant, palette: colors.palette });
+            }
+          });
         };
 
         var useCSSBackground = function(){
@@ -74,9 +79,12 @@
           }
           else if ( $this.attr( DATA_PARENT ) && $this.parents( $this.attr( DATA_PARENT ) ).length ){
             $parent = $this.parents( $this.attr( DATA_PARENT ) );
-          } 
+          }
           else if ( useCSSBackground() ){
             $parent = $this;
+          }
+          else if (opts.parent) {
+            $parent = $this.parents( opts.parent );
           }
           else {
             $parent = $this.parent();
@@ -108,7 +116,7 @@
 
         });
 
-        /* Handle the colors. */ 
+        /* Handle the colors. */
         handleColors();
 
       });

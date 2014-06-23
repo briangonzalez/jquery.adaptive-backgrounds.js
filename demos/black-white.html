@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Base - Single</title>
+  <title>B/W Backgrounds</title>
 
   <script type="text/javascript" src='/lib/jquery.js'></script>
   <script type="text/javascript" src='/src/jquery.adaptive-backgrounds.js'></script>
   <script type="text/javascript">
 
   $(document).ready(function(){
-    $.adaptiveBackground.run();
+    $.adaptiveBackground.run({
+      exclude: []
+    });
   });
 
   </script>
 
   <style type="text/css">
 
-    body{
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
     .img-wrap{
       border: 2px solid #ccc;
-      height: 400px;
-      width: 400px;
-      position: absolute;
-      top: 50%; left: 50%;
       text-align: center;
-      -webkit-transform: translateY(-50%) translateX(-50%);
+      width: 800px;
+      margin: 10px auto;
     }
 
     .img-wrap img{
       height: 100%;
+      border: 1px dotted #ccc;
     }
 
   </style>
@@ -40,7 +35,11 @@
 <body>
 
   <div class='img-wrap'>
-      <img id="img" src="images/3.jpg" data-adaptive-background='1'>
+    <img class="img" src="images/black-bg.jpg" data-adaptive-background='1'>
+  </div>
+
+  <div class='img-wrap'>
+    <img class="img" src="images/white-bg.jpg" data-adaptive-background='1'>
   </div>
 
 </body>
