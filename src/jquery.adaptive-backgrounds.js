@@ -1,7 +1,15 @@
 
 /* jshint debug: true, expr: true */
 
-;(function($){
+;(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['jquery'], factory);
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
+} (function($){
 
   /* Constants & defaults. */
   var DATA_COLOR    = 'data-ab-color';
@@ -123,4 +131,4 @@
     },
   };
 
-})(jQuery);
+}));
