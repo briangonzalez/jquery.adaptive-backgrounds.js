@@ -114,6 +114,8 @@
           $parent.addClass( getLumaClass(data.color) )
                  .attr('data-ab-yaq', getYIQ(data.color));
 
+                 opts.cb();
+
         });
 
         /* Handle the colors. */
