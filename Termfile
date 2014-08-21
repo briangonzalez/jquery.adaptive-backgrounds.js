@@ -3,8 +3,8 @@ root:
 
 commands:
   git:       git st
-  serve:     grunt serve
+  serve:     node ./static.js
 
 layout:
-  - [ git ]      
-  - [ serve ]    
+  - [ git ]
+  - [ serve ]
