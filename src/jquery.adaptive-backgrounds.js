@@ -44,11 +44,11 @@
       $( opts.selector ).each(function(index, el){
         var $this = $(this);
 
-        /*  Small helper functions which applie
-            colors, attrs, triggers events, and check for css
+        /*  Small helper functions which applies
+            colors, attrs, triggers events, etc.
         */
-        var handleColors = function(){
-          var img = useCSSBackground() ? CSSBackground() : $this[0];
+        var handleColors = function () {
+          var img = useCSSBackground() ? getCSSBackground() : $this[0];
 
           RGBaster.colors(img, {
             paletteSize: 20,
@@ -58,22 +58,23 @@
               $this.trigger(EVENT_CF, { color: colors.dominant, palette: colors.palette });
             }
           });
+
         };
 
         var useCSSBackground = function(){
           return $this.attr( DATA_CSS_BG );
         };
 
-        var CSSBackground = function(){
+        var getCSSBackground = function(){
           return $this.css('background-image')
                       .replace('url(','').replace(')','');
         };
 
         /* Subscribe to our color-found event. */
         $this.on( EVENT_CF, function(ev, data){
-          var $data = data;
-          var $parent;
 
+          // Try to find the parent.
+          var $parent;
           if ( opts.parent && $this.parents( opts.parent ).length ) {
             $parent = $this.parents( opts.parent );
           }
@@ -94,7 +95,7 @@
 
           // Helper function to calculate yiq - http://en.wikipedia.org/wiki/YIQ
           var getYIQ = function(color){
-            var rgb = $data.color.match(/\d+/g);
+            var rgb = data.color.match(/\d+/g);
             return ((rgb[0]*299)+(rgb[1]*587)+(rgb[2]*114))/1000;
           };
 
@@ -114,6 +115,7 @@
           $parent.addClass( getLumaClass(data.color) )
                  .attr('data-ab-yaq', getYIQ(data.color));
 
+          opts.success && opts.success($this, data);
         });
 
         /* Handle the colors. */

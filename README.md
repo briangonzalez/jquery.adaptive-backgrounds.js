@@ -89,6 +89,19 @@ $('img.my-image').on('ab-color-found', function(ev,payload){
 });
 ```
 
+Success Callback
+----------------
+You may wish to supply a callback function which is called once the magic has been performed.
+
+```javascript
+$.adaptiveBackground.run({
+  success: function($img, data) {
+    console.log('Success!', $img, data);
+  }
+});
+```
+Note, this callback is called _once_ for each image.
+
 Caveats
 --------------
 This plugin utlizes the `<canvas>` element and the `ImageData` object, and due to cross-site security limitations, the script will fail if one tries to extract the colors from an image not hosted on the current domain, *unless* the image allows for [Cross Origin Resource Sharing](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
