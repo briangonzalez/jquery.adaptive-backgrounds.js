@@ -67,6 +67,7 @@
 
         var getCSSBackground = function(){
           return $this.css('background-image')
+                      .replace('url("','').replace('")','')
                       .replace('url(','').replace(')','');
         };
 
