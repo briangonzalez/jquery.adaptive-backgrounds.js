@@ -122,7 +122,7 @@
         handleColors();
 
       });
-    },
+    }
   };
 
 })(jQuery);
