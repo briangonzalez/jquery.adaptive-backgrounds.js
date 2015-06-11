@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Shade Adjustment</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href="http://fonts.googleapis.com/css?family=Lato:100,300|Raleway:100" rel="stylesheet" type="text/css">
+
+		<link href="css/styles.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src='/lib/jquery.js'></script>
+		<script type="text/javascript" src='/src/jquery.adaptive-backgrounds.js'></script>
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+				$.adaptiveBackground.run({
+					shadeVariation: true,
+					shadePercentage: .05
+				});
+			});
+
+		</script>
+
+		  <style type="text/css">
+
+		    *{
+		    	padding: 0px;
+		    	margin: 0px;
+		    }
+
+		    body {
+	    	    background: #eeeeee;
+		    }
+
+		    .img-wrap{
+		      width: 100%;
+		      height: 700px;
+		      padding: 75px 0;
+
+	          position: relative;
+
+              overflow: hidden;
+
+		      text-align: center;
+
+		      outline: 2px solid #ccc;
+
+		      background-color: #FFFFFF;
+
+		      transition: all .3s ease;
+		    }
+		    /*
+		    .img-wrap::before, .img-wrap::after {
+		    	content: '';
+				position: absolute;
+				top: 20%;
+				left: 10px;
+				width: 500px;
+				height: 1000px;
+				z-index: 1;
+				background: rgba(255, 255, 255, 0.05);
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				transform: rotate(45deg);
+		    }
+
+		    .img-wrap:after {
+		    	webkit-transform: rotate(135deg);
+				-moz-transform: rotate(135deg);
+				-ms-transform: rotate(135deg);
+				-o-transform: rotate(135deg);
+				transform: rotate(135deg);
+		    }
+			*/
+
+		    .img-wrap img {
+	    	    height: 100%;
+
+	    	    display: inline-block;
+	    	    position: relative;
+	    	    z-index: 2;
+
+	    	    /*webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+				-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);*/
+		    }
+
+		  </style>
+
+	</head>
+
+	<body>
+
+		<header>
+
+			<span class="logo">
+
+				<span class="box first"></span>
+				<span class="box second"></span>
+				<span class="box third"></span>
+
+			</span>
+
+			<h1>adaptive backgrounds</h1>
+			<h2>Branch : ShadeVariation</h2>
+			<h3>A jQuery plugin for extracting dominant colors from images and applying it to its parent.</h3>
+			<!-- <a href="https://github.com/briangonzalez/jquery.adaptive-backgrounds.js" class="button mr">Github</a>
+			<a href="#" class="button tweet">Tweet</a> -->
+
+		</header>
+
+		<section class='img-wrap'>
+
+			<img id="img" src="images/twitter-icon.png" data-adaptive-background='1' />
+
+		</section>
+
+	</body>
+
+</html>
