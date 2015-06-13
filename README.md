@@ -38,6 +38,9 @@ Enable this functionality by adding a data property, `data-ab-css-background` to
 Demo
 -----------
 Here's a little demo of how it works. (1) The page loads (2) the dominant background color of the image is extracted (3) said color is applied to parent of image. _Demo drastically slowed down to show effect_.
+
+---
+
 <img src="https://raw.github.com/briangonzalez/jquery.adaptive-background.js/master/misc/ab.gif">
 
 API
