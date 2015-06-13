@@ -10,7 +10,7 @@
   var EVENT_CF      = 'ab-color-found';
 
   var DEFAULTS      = {
-    selector:             '[data-adaptive-background="1"]',
+    selector:             '[data-adaptive-background]',
     parent:               null,
     exclude:              [ 'rgb(0,0,0)', 'rgba(255,255,255)' ],
     normalizeTextColor:   false,
@@ -62,7 +62,8 @@
         };
 
         var useCSSBackground = function(){
-          return $this.attr( DATA_CSS_BG );
+          var attr = $this.attr( DATA_CSS_BG );
+          return (typeof attr !== typeof undefined && attr !== false);
         };
 
         var getCSSBackground = function(){

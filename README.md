@@ -22,7 +22,7 @@ $(document).ready(function(){
 The script looks for image(s) with the `data-adaptive-background` attribute:
 
 ```html
-<img src="/image.jpg" data-adaptive-background='1'>
+<img src="/image.jpg" data-adaptive-background>
 ```
 
 ### Using an element with a CSS background image
@@ -32,7 +32,7 @@ Instead of using an `<img>` element nested inside of parent element, AB supports
 Enable this functionality by adding a data property, `data-ab-css-background` to the element. See the example below:
 
 ```html
-<div style='background-image: url(/some-image.jpg)' data-adaptive-background='1' data-ab-css-background='1'></div>
+<div style='background-image: url(/some-image.jpg)' data-adaptive-background data-ab-css-background></div>
 ```
 
 Demo
@@ -123,7 +123,7 @@ To enable CORS for images hosted on S3 buckets, follow the Amazon guide [here](h
 For all images, you can optionally also include a cross-origin attribute in your image. This is not absolutely necessary since the `anonymous` origin is set in the Javascript code, but kudos to you for being a super-developer.
 
 ```html
-<img src="/image.jpg" data-adaptive-background='1' cross-origin="anonymous"/>
+<img src="/image.jpg" data-adaptive-background cross-origin="anonymous"/>
 ```
 
 Credit
