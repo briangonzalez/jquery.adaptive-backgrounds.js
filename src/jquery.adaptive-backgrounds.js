@@ -66,8 +66,10 @@
         };
 
         var getCSSBackground = function(){
-          return $this.css('background-image')
-                      .replace('url(','').replace(')','');
+          var str = $this.css('background-image');
+          var regex = /\(([^)]+)\)/;
+          var match = regex.exec(str)[1].replace(/"/g, '')
+          return match;
         };
 
         /* Subscribe to our color-found event. */
