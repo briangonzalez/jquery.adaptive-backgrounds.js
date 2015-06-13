@@ -11,11 +11,18 @@ _A simple jQuery plugin to extract the dominant color of an image and apply it t
 
 Getting Started
 ------------------
-Simply include jQuery and the script in your page, then run the it like so:
+
+Install via bower:
+
+```
+bower install --save adaptive.background
+```
+
+Then simply include jQuery and the script in your page, and invoke it like so:
 
 ```javascript
 $(document).ready(function(){
-  $.adaptiveBackground.run()
+  $.adaptiveBackground.run();
 });
 ```
 
