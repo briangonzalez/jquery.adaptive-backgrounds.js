@@ -11,18 +11,25 @@ _A simple jQuery plugin to extract the dominant color of an image and apply it t
 
 Getting Started
 ------------------
-Simply include jQuery and the __[script](https://raw.githubusercontent.com/briangonzalez/jquery.adaptive-backgrounds.js/master/src/jquery.adaptive-backgrounds.js)__ in your page, then run the script like so:
+
+Install via bower:
+
+```
+bower install --save adaptive.background
+```
+
+Then simply include jQuery and the script in your page, and invoke it like so:
 
 ```javascript
 $(document).ready(function(){
-  $.adaptiveBackground.run()
+  $.adaptiveBackground.run();
 });
 ```
 
 The script looks for image(s) with the `data-adaptive-background` attribute:
 
 ```html
-<img src="/image.jpg" data-adaptive-background='1'>
+<img src="/image.jpg" data-adaptive-background>
 ```
 
 ### Using an element with a CSS background image
@@ -32,12 +39,15 @@ Instead of using an `<img>` element nested inside of parent element, AB supports
 Enable this functionality by adding a data property, `data-ab-css-background` to the element. See the example below:
 
 ```html
-<div style='background-image: url(/some-image.jpg)' data-adaptive-background='1' data-ab-css-background='1'></div>
+<div style='background-image: url(/some-image.jpg)' data-adaptive-background data-ab-css-background></div>
 ```
 
 Demo
 -----------
 Here's a little demo of how it works. (1) The page loads (2) the dominant background color of the image is extracted (3) said color is applied to parent of image. _Demo drastically slowed down to show effect_.
+
+---
+
 <img src="https://raw.github.com/briangonzalez/jquery.adaptive-background.js/master/misc/ab.gif">
 
 API
@@ -120,7 +130,7 @@ To enable CORS for images hosted on S3 buckets, follow the Amazon guide [here](h
 For all images, you can optionally also include a cross-origin attribute in your image. This is not absolutely necessary since the `anonymous` origin is set in the Javascript code, but kudos to you for being a super-developer.
 
 ```html
-<img src="/image.jpg" data-adaptive-background='1' cross-origin="anonymous"/>
+<img src="/image.jpg" data-adaptive-background cross-origin="anonymous"/>
 ```
 
 Credit

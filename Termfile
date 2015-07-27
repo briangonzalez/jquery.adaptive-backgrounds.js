@@ -1,5 +1,5 @@
 root:
-  ~/code/github/jquery.adaptive-backgrounds.js
+  ~/code/projects/jquery.adaptive-backgrounds.js
 
 commands:
   git:       git st
