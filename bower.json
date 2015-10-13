@@ -1,0 +1,22 @@
+{
+  "name": "jquery.adaptive-backgrounds.js",
+  "version": "1.0.3",
+  "homepage": "https://github.com/briangonzalez/jquery.adaptive-backgrounds.js",
+  "authors": [
+    "Brian Gonzalez <me@briangonzalez.org>"
+  ],
+  "description": "A jQuery plugin for extracting the dominant color from images and applying the color to their parent. http://briangonzalez.github.io/jquery.adaptive-backgrounds.js/",
+  "main": "src/jquery.adaptive-backgrounds.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "jquery",
+    "adaptive",
+    "background",
+    "color",
+    "image",
+    "processing"
+  ],
+  "license": "MIT"
+}
