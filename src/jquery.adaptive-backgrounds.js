@@ -125,7 +125,7 @@
         handleColors();
 
       });
-    },
+    }
   };
 
 })(jQuery);
