@@ -12,7 +12,7 @@
   var DEFAULTS      = {
     selector:             '[data-adaptive-background]',
     parent:               null,
-    exclude:              [ 'rgb(0,0,0)', 'rgba(255,255,255)' ],
+    exclude:              [ 'rgb(0,0,0)', 'rgb(255,255,255)' ],
     normalizeTextColor:   false,
     normalizedTextColors:  {
       light:      "#fff",
