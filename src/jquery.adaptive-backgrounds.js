@@ -98,7 +98,7 @@
 
           // Helper function to calculate yiq - http://en.wikipedia.org/wiki/YIQ
           var getYIQ = function(color){
-            var rgb = data.color.match(/\d+/g);
+            var rgb = color.match(/\d+/g);
             return ((rgb[0]*299)+(rgb[1]*587)+(rgb[2]*114))/1000;
           };
 
