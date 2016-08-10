@@ -137,11 +137,16 @@ Credit
 ------
 This plugin is built on top of a script called [RGBaster](https://github.com/briangonzalez/rgbaster.js).
 
-Author
+Collaborators
 -------
 | ![twitter/brianmgonzalez](http://gravatar.com/avatar/f6363fe1d9aadb1c3f07ba7867f0e854?s=70](http://twitter.com/brianmgonzalez "Follow @brianmgonzalez on Twitter") |
 |---|
 | [Brian Gonzalez](http://briangonzalez.org) |
+
+| ![twitter/scottstern06](https://avatars1.githubusercontent.com/u/10355544?v=3&u=cd4ab67acc12c6dc9da4bc2771d5eb72e50f035b&s=140 "Follow @scottstern06 on Twitter") |
+|---|
+| [Scott Stern]|
+
 
 License
 -------
