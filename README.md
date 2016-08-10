@@ -1,7 +1,6 @@
 ![artboard](https://cloud.githubusercontent.com/assets/659829/17540609/4533a390-5e6c-11e6-8438-db25bcee1adc.png)
 
-jquery.adaptive-backgrounds.js
-------------------------------
+> jquery.adaptive-backgrounds.js
 
 _A simple jQuery plugin to extract the dominant color of an image and apply it to the background of its parent element._
 
