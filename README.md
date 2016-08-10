@@ -1,6 +1,4 @@
-<p align='center'>
-  <img src='http://briangonzalez.github.io/jquery.adaptive-backgrounds.js/favicon.png?2'>
-</p>
+![artboard](https://cloud.githubusercontent.com/assets/659829/17540609/4533a390-5e6c-11e6-8438-db25bcee1adc.png)
 
 jquery.adaptive-backgrounds.js
 ------------------------------
