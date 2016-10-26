@@ -21,7 +21,8 @@
     lumaClasses:  {
       light:      "ab-light",
       dark:       "ab-dark"
-    }
+    },
+	transparent: null
   };
 
   // Include RGBaster - https://github.com/briangonzalez/rgbaster.js
@@ -93,9 +94,15 @@
           else {
             $parent = $this.parent();
           }
-
-          $parent.css({ backgroundColor: data.color });
-
+		  if($.isNumeric(opts.transparent) && opts.transparent != null && opts.transparent >= 0.01 && opts.transparent <= 0.99) {
+            var dominantColor = data.color;
+            var rgbToRgba = dominantColor.replace("rgb", "rgba");
+            var transparentColor = rgbToRgba.replace(")", ", " + opts.transparent + ")");
+            $parent.css({ backgroundColor: transparentColor });
+		  } else {
+            $parent.css({ backgroundColor: data.color });
+		  }
+         
           // Helper function to calculate yiq - http://en.wikipedia.org/wiki/YIQ
           var getYIQ = function(color){
             var rgb = color.match(/\d+/g);
