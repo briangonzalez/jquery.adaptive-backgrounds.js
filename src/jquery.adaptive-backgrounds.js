@@ -49,7 +49,20 @@
             colors, attrs, triggers events, etc.
         */
         var handleColors = function () {
-          var img = useCSSBackground() ? getCSSBackground() : $this[0];
+          if($this[0].tagName == 'PICTURE'){
+            var images = $this[0].children;
+            for(var image in images){
+              if(images[image].tagName == 'IMG'){
+                var img = images[image];
+                  break;
+              }
+            };
+            if(img.currentSrc){
+              img = img.currentSrc;
+            };
+          }else{
+            var img = useCSSBackground() ? getCSSBackground() : $this[0];
+          }
 
           RGBaster.colors(img, {
             paletteSize: 20,
