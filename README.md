@@ -1,9 +1,6 @@
-<p align='center'>
-  <img src='http://briangonzalez.github.io/jquery.adaptive-backgrounds.js/favicon.png?2'>
-</p>
+![artboard](https://cloud.githubusercontent.com/assets/659829/17540609/4533a390-5e6c-11e6-8438-db25bcee1adc.png)
 
-jquery.adaptive-backgrounds.js
-------------------------------
+> jquery.adaptive-backgrounds.js
 
 _A simple jQuery plugin to extract the dominant color of an image and apply it to the background of its parent element._
 
@@ -59,8 +56,9 @@ Default Options
 ----------------
 - __selector__ String _(default: `'img[data-adaptive-background="1"]'`)_ a CSS selector which denotes which images to grab/process. Ideally, this selector would start with _img_, to ensure we only grab and try to process actual images.
 - __parent__ falsy _(default: `null`)_ a CSS selector which denotes which parent to apply the background color to. By default, the color is applied to the parent one level up the DOM tree.
-- __normalizeTextColor__ boolean _(default: `false`)_ option to normalize the color of the parent text if background color is too dark or too light
-- __normalizedTextColors__ Object Literal _(default: `{dark: '#000', light: '#fff'}`)_ text colors used when background is either too dark/light
+- __normalizeTextColor__ boolean _(default: `false`)_ option to normalize the color of the parent text if background color is too dark or too light.
+- __normalizedTextColors__ Object Literal _(default: `{dark: '#000', light: '#fff'}`)_ text colors used when background is either too dark/light.
+- __transparent__  Transparent dominant color. Can be adjusted from 0.01 to 0.99.
 
 
 __Example:__
@@ -79,7 +77,8 @@ var defaults      = {
   lumaClasses:  {
     light:      "ab-light",
     dark:       "ab-dark"
-  }
+  },
+  transparent: null
 };
 $.adaptiveBackground.run(defaults)
 ```
@@ -137,11 +136,11 @@ Credit
 ------
 This plugin is built on top of a script called [RGBaster](https://github.com/briangonzalez/rgbaster.js).
 
-Author
+Collaborators
 -------
-| ![twitter/brianmgonzalez](http://gravatar.com/avatar/f6363fe1d9aadb1c3f07ba7867f0e854?s=70](http://twitter.com/brianmgonzalez "Follow @brianmgonzalez on Twitter") |
-|---|
-| [Brian Gonzalez](http://briangonzalez.org) |
+| ![Brian Gonzalez](http://gravatar.com/avatar/f6363fe1d9aadb1c3f07ba7867f0e854?s=70 "Brian Gonzalez") | ![Scott Stern](https://gravatar.com/avatar/0d4467ab78f0c73c7442d9b5c23299cc?s=70 "Scott Stern")
+|---|---|
+| [Brian Gonzalez](http://briangonzalez.org) | [Scott Stern](https://github.com/sstern6)|
 
 License
 -------
