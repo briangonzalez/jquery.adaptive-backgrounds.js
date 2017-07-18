@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Base - Single</title>
+
+        <script type="text/javascript" src='/lib/jquery.js'></script>
+        <script type="text/javascript" src='/src/jquery.adaptive-backgrounds.js'></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $.adaptiveBackground.run({
+                    shadeVariation: 'blend',
+                    shadePercentage: .2,
+                    shadeColors: {
+                        dark: 'rgb(255,255,255)',
+                        light: 'rgb(0,0,0)'
+                    }
+                });
+            });
+        </script>
+
+        <style type="text/css">
+            body {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .img-wrap {
+                height: 400px;
+                width: 100%;
+                margin: 5px 0;
+                position: relative;
+                float: left;
+                text-align: center;
+                border: 1px solid #eee;
+            }
+
+            .img-wrap img {
+                height: 75%;
+                position: relative;
+                top: 12.5%;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class='img-wrap'>
+            <img id="img" src="images/fb-icon.png" data-adaptive-background>
+        </div>
+
+        <div class='img-wrap'>
+            <img id="img" src="images/twitter-icon.png" data-adaptive-background>
+        </div>
+
+    </body>
+
+</html>
