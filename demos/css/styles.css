@@ -1,0 +1,758 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@-webkit-keyframes rotate-first {
+  /* line 5, ../_scss/_animations.scss */
+  0% {
+    -webkit-transform: rotate(0deg) translateX(-50px);
+    -moz-transform: rotate(0deg) translateX(-50px);
+    -ms-transform: rotate(0deg) translateX(-50px);
+    -o-transform: rotate(0deg) translateX(-50px);
+    transform: rotate(0deg) translateX(-50px);
+  }
+
+  /* line 6, ../_scss/_animations.scss */
+  20% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 7, ../_scss/_animations.scss */
+  100% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+@-moz-keyframes rotate-first {
+  /* line 5, ../_scss/_animations.scss */
+  0% {
+    -webkit-transform: rotate(0deg) translateX(-50px);
+    -moz-transform: rotate(0deg) translateX(-50px);
+    -ms-transform: rotate(0deg) translateX(-50px);
+    -o-transform: rotate(0deg) translateX(-50px);
+    transform: rotate(0deg) translateX(-50px);
+  }
+
+  /* line 6, ../_scss/_animations.scss */
+  20% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 7, ../_scss/_animations.scss */
+  100% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+@-o-keyframes rotate-first {
+  /* line 5, ../_scss/_animations.scss */
+  0% {
+    -webkit-transform: rotate(0deg) translateX(-50px);
+    -moz-transform: rotate(0deg) translateX(-50px);
+    -ms-transform: rotate(0deg) translateX(-50px);
+    -o-transform: rotate(0deg) translateX(-50px);
+    transform: rotate(0deg) translateX(-50px);
+  }
+
+  /* line 6, ../_scss/_animations.scss */
+  20% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 7, ../_scss/_animations.scss */
+  100% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes rotate-first {
+  /* line 5, ../_scss/_animations.scss */
+  0% {
+    -webkit-transform: rotate(0deg) translateX(-50px);
+    -moz-transform: rotate(0deg) translateX(-50px);
+    -ms-transform: rotate(0deg) translateX(-50px);
+    -o-transform: rotate(0deg) translateX(-50px);
+    transform: rotate(0deg) translateX(-50px);
+  }
+
+  /* line 6, ../_scss/_animations.scss */
+  20% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 7, ../_scss/_animations.scss */
+  100% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes rotate-second {
+  /* line 12, ../_scss/_animations.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 13, ../_scss/_animations.scss */
+  30% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 14, ../_scss/_animations.scss */
+  100% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+@-moz-keyframes rotate-second {
+  /* line 12, ../_scss/_animations.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 13, ../_scss/_animations.scss */
+  30% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 14, ../_scss/_animations.scss */
+  100% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+@-o-keyframes rotate-second {
+  /* line 12, ../_scss/_animations.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 13, ../_scss/_animations.scss */
+  30% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 14, ../_scss/_animations.scss */
+  100% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes rotate-second {
+  /* line 12, ../_scss/_animations.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 13, ../_scss/_animations.scss */
+  30% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* line 14, ../_scss/_animations.scss */
+  100% {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes rotate-third {
+  /* line 19, ../_scss/_animations.scss */
+  0% {
+    -webkit-transform: rotate(0deg) translateX(50px);
+    -moz-transform: rotate(0deg) translateX(50px);
+    -ms-transform: rotate(0deg) translateX(50px);
+    -o-transform: rotate(0deg) translateX(50px);
+    transform: rotate(0deg) translateX(50px);
+  }
+
+  /* line 20, ../_scss/_animations.scss */
+  20% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /* line 21, ../_scss/_animations.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
+
+@-moz-keyframes rotate-third {
+  /* line 19, ../_scss/_animations.scss */
+  0% {
+    -webkit-transform: rotate(0deg) translateX(50px);
+    -moz-transform: rotate(0deg) translateX(50px);
+    -ms-transform: rotate(0deg) translateX(50px);
+    -o-transform: rotate(0deg) translateX(50px);
+    transform: rotate(0deg) translateX(50px);
+  }
+
+  /* line 20, ../_scss/_animations.scss */
+  20% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /* line 21, ../_scss/_animations.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
+
+@-o-keyframes rotate-third {
+  /* line 19, ../_scss/_animations.scss */
+  0% {
+    -webkit-transform: rotate(0deg) translateX(50px);
+    -moz-transform: rotate(0deg) translateX(50px);
+    -ms-transform: rotate(0deg) translateX(50px);
+    -o-transform: rotate(0deg) translateX(50px);
+    transform: rotate(0deg) translateX(50px);
+  }
+
+  /* line 20, ../_scss/_animations.scss */
+  20% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /* line 21, ../_scss/_animations.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes rotate-third {
+  /* line 19, ../_scss/_animations.scss */
+  0% {
+    -webkit-transform: rotate(0deg) translateX(50px);
+    -moz-transform: rotate(0deg) translateX(50px);
+    -ms-transform: rotate(0deg) translateX(50px);
+    -o-transform: rotate(0deg) translateX(50px);
+    transform: rotate(0deg) translateX(50px);
+  }
+
+  /* line 20, ../_scss/_animations.scss */
+  20% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /* line 21, ../_scss/_animations.scss */
+  100% {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
+
+/* line 27, ../_scss/styles.scss */
+body {
+  font-family: Lato, arial;
+  background: #eeeeee;
+  overflow-x: hidden;
+  line-height: 1.6em;
+}
+/* line 33, ../_scss/styles.scss */
+body * {
+  box-sizing: border-box;
+}
+/* line 35, ../_scss/styles.scss */
+body .image-wrapper {
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* line 39, ../_scss/styles.scss */
+body .image-wrapper .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+/* line 45, ../_scss/styles.scss */
+body .image-wrapper .inner:after, body .image-wrapper .inner:before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 10px;
+  width: 500px;
+  height: 1000px;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* line 58, ../_scss/styles.scss */
+body .image-wrapper .inner:after {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+/* line 62, ../_scss/styles.scss */
+body .image-wrapper .inner .color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 10px;
+  color: #333333;
+  background: rgba(238, 238, 238, 0.9);
+  padding: 5px 10px;
+  font-size: 80%;
+  opacity: 0;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+/* line 73, ../_scss/styles.scss */
+body .image-wrapper .inner .color .swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: red;
+  margin-right: 5px;
+}
+/* line 80, ../_scss/styles.scss */
+body .image-wrapper .inner:hover .color {
+  opacity: 1;
+}
+/* line 84, ../_scss/styles.scss */
+body .image-wrapper img {
+  width: 50%;
+  min-width: 250px;
+  max-width: 600px;
+  display: inline-block;
+  z-index: 2;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  margin: 160px 0;
+  position: relative;
+  z-index: 10;
+}
+/* line 98, ../_scss/styles.scss */
+body header {
+  text-align: center;
+  color: #333;
+  padding: 160px 0;
+}
+/* line 103, ../_scss/styles.scss */
+body header .logo {
+  width: 120px;
+  height: 40px;
+  display: inline-block;
+  margin-bottom: 40px;
+  margin-right: -20px;
+}
+/* line 111, ../_scss/styles.scss */
+body header .logo .box {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #d27f6d;
+  opacity: 0.85;
+  margin-left: -13.33333px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transform-origin: 50% 50% 50%;
+  -moz-transform-origin: 50% 50% 50%;
+  -ms-transform-origin: 50% 50% 50%;
+  -o-transform-origin: 50% 50% 50%;
+  transform-origin: 50% 50% 50%;
+}
+/* line 123, ../_scss/styles.scss */
+body header .logo .box.first {
+  -webkit-transform: rotate(0deg) translateX(-50px);
+  -moz-transform: rotate(0deg) translateX(-50px);
+  -ms-transform: rotate(0deg) translateX(-50px);
+  -o-transform: rotate(0deg) translateX(-50px);
+  transform: rotate(0deg) translateX(-50px);
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: rotate-first;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-delay: 0.5s;
+  -moz-animation-duration: 3s;
+  -moz-animation-name: rotate-first;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-iteration-count: 1;
+  animation-delay: 0.5s;
+  animation-duration: 3s;
+  animation-name: rotate-first;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-iteration-count: 1;
+  background: #eac56a;
+}
+/* line 124, ../_scss/styles.scss */
+body header .logo .box.second {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: rotate-second;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-delay: 0.5s;
+  -moz-animation-duration: 3s;
+  -moz-animation-name: rotate-second;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-iteration-count: 1;
+  animation-delay: 0.5s;
+  animation-duration: 3s;
+  animation-name: rotate-second;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-iteration-count: 1;
+}
+/* line 125, ../_scss/styles.scss */
+body header .logo .box.third {
+  -webkit-transform: rotate(0deg) translateX(50px);
+  -moz-transform: rotate(0deg) translateX(50px);
+  -ms-transform: rotate(0deg) translateX(50px);
+  -o-transform: rotate(0deg) translateX(50px);
+  transform: rotate(0deg) translateX(50px);
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: rotate-third;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-delay: 0.5s;
+  -moz-animation-duration: 3s;
+  -moz-animation-name: rotate-third;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-iteration-count: 1;
+  animation-delay: 0.5s;
+  animation-duration: 3s;
+  animation-name: rotate-third;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-iteration-count: 1;
+  background: #56575c;
+}
+/* line 129, ../_scss/styles.scss */
+body header h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 160%;
+  margin-bottom: 0.25em;
+  font-weight: 300;
+  color: #929398;
+  font-family: Raleway;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (min-width: 500px) {
+  /* line 129, ../_scss/styles.scss */
+  body header h1 {
+    font-size: 200%;
+  }
+}
+@media only screen and (min-width: 750px) {
+  /* line 129, ../_scss/styles.scss */
+  body header h1 {
+    font-size: 300%;
+  }
+}
+/* line 143, ../_scss/styles.scss */
+body header h3 {
+  font-weight: 300;
+  font-size: 100%;
+  padding: 0 3em;
+  letter-spacing: 1px;
+  color: #babbc0;
+}
+@media only screen and (min-width: 500px) {
+  /* line 143, ../_scss/styles.scss */
+  body header h3 {
+    font-size: 110%;
+  }
+}
+@media only screen and (min-width: 750px) {
+  /* line 143, ../_scss/styles.scss */
+  body header h3 {
+    font-size: 120%;
+  }
+}
+/* line 153, ../_scss/styles.scss */
+body header a.button {
+  background: #74757a;
+  margin-top: 40px;
+  padding: 13.33333px 26.66667px;
+  border: none;
+  color: white;
+  font-family: Lato;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  width: 80%;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-box-shadow: 0 1px 0 #dadada, 0 2px 0 #dadada, 0 3px 0 #dadada, 0 4px 0 #dadada;
+  -moz-box-shadow: 0 1px 0 #dadada, 0 2px 0 #dadada, 0 3px 0 #dadada, 0 4px 0 #dadada;
+  box-shadow: 0 1px 0 #dadada, 0 2px 0 #dadada, 0 3px 0 #dadada, 0 4px 0 #dadada;
+}
+@media only screen and (min-width: 500px) {
+  /* line 153, ../_scss/styles.scss */
+  body header a.button {
+    display: inline-block;
+    width: auto;
+  }
+  /* line 180, ../_scss/styles.scss */
+  body header a.button.tweet {
+    margin-top: 40px;
+  }
+}
+/* line 183, ../_scss/styles.scss */
+body header a.button:hover {
+  -webkit-transform: translateY(-1px);
+  -moz-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  -o-transform: translateY(-1px);
+  transform: translateY(-1px);
+  background: #7e7f84;
+}
+/* line 184, ../_scss/styles.scss */
+body header a.button:active {
+  -webkit-transform: translateY(3px);
+  -moz-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  -o-transform: translateY(3px);
+  transform: translateY(3px);
+}
+/* line 185, ../_scss/styles.scss */
+body header a.button.mr {
+  margin-right: 5px;
+}
+/* line 186, ../_scss/styles.scss */
+body header a.button.tweet {
+  margin-top: 10px;
+}
+/* line 190, ../_scss/styles.scss */
+body footer {
+  background: #eeeeee;
+  padding: 80px 20px;
+  text-align: center;
+}
+/* line 195, ../_scss/styles.scss */
+body footer .twitter-wrap {
+  margin-top: 20px;
+}
+/* line 198, ../_scss/styles.scss */
+body footer .twitter-wrap .gh-star {
+  margin-top: 20px;
+}
+/* line 201, ../_scss/styles.scss */
+body footer a, body footer a:hover {
+  border-bottom: 2px solid rgba(86, 87, 92, 0.6);
+  text-decoration: none;
+  color: #56575c;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+/* line 206, ../_scss/styles.scss */
+body footer a:hover, body footer a:hover:hover {
+  border-bottom-color: white;
+}

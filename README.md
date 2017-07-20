@@ -69,6 +69,7 @@ var defaults      = {
   selector:             '[data-adaptive-background="1"]',
   parent:               null,
   exclude:              [ 'rgb(0,0,0)', 'rgba(255,255,255)' ],
+  shadeVariation:       false,
   normalizeTextColor:   false,
   normalizedTextColors:  {
     light:      "#fff",
