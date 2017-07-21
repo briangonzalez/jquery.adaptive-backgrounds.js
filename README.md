@@ -58,6 +58,9 @@ Default Options
 - __parent__ falsy _(default: `null`)_ a CSS selector which denotes which parent to apply the background color to. By default, the color is applied to the parent one level up the DOM tree.
 - __normalizeTextColor__ boolean _(default: `false`)_ option to normalize the color of the parent text if background color is too dark or too light.
 - __normalizedTextColors__ Object Literal _(default: `{dark: '#000', light: '#fff'}`)_ text colors used when background is either too dark/light.
+- __shadeVariation__ `blend|true|false` (default) option to shade the color of the parent ligher or darker (see shadePercentage) or blend the color of the parent with another color by a certain percentage (see shadeColors).
+- __shadePercentage__ integer (default: `0`) sets the percentage of shading or blending used. Can be adjusted from -100 to 100.
+- __shadeColors__ Object Literal ( default: `{light:'rgb(255,255,255)',dark:'rgb(0,0,0)'}` ) sets the color that will be used to blend the background color with. Two values are provided to account for the background color to be light or dark to start with.
 - __transparent__  Transparent dominant color. Can be adjusted from 0.01 to 0.99.
 
 
@@ -69,7 +72,12 @@ var defaults      = {
   selector:             '[data-adaptive-background="1"]',
   parent:               null,
   exclude:              [ 'rgb(0,0,0)', 'rgba(255,255,255)' ],
-  shadeVariation:       false,
+  shadeVariation:   false,
+  shadePercentage:  0,
+  shadeColors:  {
+    light:      'rgb(255,255,255)',
+    dark:       'rgb(0,0,0)' 
+  },
   normalizeTextColor:   false,
   normalizedTextColors:  {
     light:      "#fff",

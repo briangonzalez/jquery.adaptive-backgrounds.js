@@ -14,6 +14,11 @@
     parent: null,
     exclude: ['rgb(0,0,0)', 'rgb(255,255,255)'],
     shadeVariation: false,
+    shadePercentage: 0,
+    shadeColors: {
+      light: 'rgb(255,255,255)',
+      dark: 'rgb(0,0,0)' 
+    },
     normalizeTextColor: false,
     normalizedTextColors: {
       light: "#fff",
