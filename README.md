@@ -147,9 +147,11 @@ This plugin is built on top of a script called [RGBaster](https://github.com/bri
 
 Collaborators
 -------
-| ![Brian Gonzalez](http://gravatar.com/avatar/f6363fe1d9aadb1c3f07ba7867f0e854?s=70 "Brian Gonzalez") | ![Scott Stern](https://gravatar.com/avatar/0d4467ab78f0c73c7442d9b5c23299cc?s=70 "Scott Stern")
-|---|---|
-| [Brian Gonzalez](http://briangonzalez.org) | [Scott Stern](https://github.com/sstern6)|
+| ![Brian Gonzalez](http://gravatar.com/avatar/f6363fe1d9aadb1c3f07ba7867f0e854?s=70 "Brian Gonzalez") | ![Scott Stern](https://gravatar.com/avatar/0d4467ab78f0c73c7442d9b5c23299cc?s=70 "Scott Stern") | ![Alfred J Kwack](https://avatars2.githubusercontent.com/u/557102?v=4&s=70 "Alfred J KWack")
+|---|---|---|
+| [Brian Gonzalez](http://briangonzalez.org) | [Scott Stern](https://github.com/sstern6) | [Alfred J Kwack ](https://github.com/AlfredJKwack)|
+
+
 
 License
 -------
