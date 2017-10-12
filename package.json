@@ -13,5 +13,16 @@
   },
   "engines": {
     "node": "*"
+  },
+  "dependencies": {
+    "opencollective": "^1.0.3"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/jquery-adaptive-backgrounds",
+    "logo": "https://opencollective.com/opencollective/logo.txt"
+  },
+  "scripts": {
+    "postinstall": "opencollective postinstall"
   }
 }
