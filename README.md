@@ -6,6 +6,13 @@ _A simple jQuery plugin to extract the dominant color of an image and apply it t
 
 **[Check it out on the web!](http://briangonzalez.github.io/jquery.adaptive-backgrounds.js/)**
 
+[![OpenCollective Backers][backer-badge]][backer-url] [![OpenCollective Sponsors][sponsor-badge]][sponsor-url]
+
+[backer-url]: #backers
+[backer-badge]: https://opencollective.com/jquery-adaptive-background/backers/badge.svg
+[sponsor-url]: #sponsors
+[sponsor-badge]: https://opencollective.com/jquery-adaptive-background/sponsors/badge.svg
+
 Getting Started
 ------------------
 
@@ -151,8 +158,38 @@ Collaborators
 |---|---|---|
 | [Brian Gonzalez](http://briangonzalez.org) | [Scott Stern](https://github.com/sstern6) | [Alfred J Kwack ](https://github.com/AlfredJKwack)|
 
+This project exists thanks to all the people who contribute. [[Contribute]](CONTRIBUTING.md).
+<a href="graphs/contributors"><img src="https://opencollective.com/jquery-adaptive-backgrounds/contributors.svg?width=890" /></a>
 
+## Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/jquery-adaptive-backgrounds#backer)]
+
+<a href="https://opencollective.com/jquery-adaptive-backgrounds#backers" target="_blank"><img src="https://opencollective.com/jquery-adaptive-backgrounds/backers.svg?width=890"></a>
+
+
+## Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/jquery-adaptive-backgrounds#sponsor)]
+
+<a href="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/0/website" target="_blank"><img src="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/1/website" target="_blank"><img src="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/2/website" target="_blank"><img src="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/3/website" target="_blank"><img src="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/4/website" target="_blank"><img src="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/5/website" target="_blank"><img src="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/6/website" target="_blank"><img src="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/7/website" target="_blank"><img src="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/8/website" target="_blank"><img src="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/9/website" target="_blank"><img src="https://opencollective.com/jquery-adaptive-backgrounds/sponsor/9/avatar.svg"></a>
 
 License
 -------
 MIT, yo.
+
+
+
+
+
+
+
